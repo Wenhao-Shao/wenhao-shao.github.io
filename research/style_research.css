@@ -5,14 +5,14 @@
     font-size: 2rem;
   }
 
-  .research-img1 {
+  .research-fig {
     padding:auto;
-    max-width: 600px;
+    max-width:1000px;
     min-width:550px;
   }
 
   .research-intro {
-    min-height: 10vh;
+    min-height: 1vh;
     width: 90%;
     margin: auto;
     -ms-flex-wrap: wrap;
@@ -43,63 +43,64 @@
             text-align:justify;
   }
 
+  .research-caption {
+    color:dimgray !important;
+  }
+
   
   /* for detailed prj pages  */
   .prj1-pic {
     padding:auto;
-    max-width: 600px;
+    max-width:600px;
     min-width:500px;
     padding-bottom: 2rem;
     padding-top: 2rem;
   }
   .prj2-pic {
     padding:auto;
-    max-width: 400px;
-    min-width:300px;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    max-width:1000px;
+    min-width:1000px;
   }
 
 
 
   /* fit different screens  */
   @media screen and (max-width: 1176px) {
-    .research-img1 {
-        max-width: 500px;
-        min-width:400px;
+    .research-fig {
+        max-width: 800px;
+        min-width: 400px;
     }
     .prj1-pic {
         max-width: 500px;
-        min-width:400px;
+        min-width: 400px;
     }
     .prj2-pic {
         max-width: 300px;
-        min-width:200px;
+        min-width: 200px;
     }
   }
 
   @media screen and (max-width: 870px) {
-    .research-img1 {
-    max-width: 500px;
-    min-width:400px;
+    .research-fig {
+    max-width: 600px;
+    min-width: 400px;
     }
     .prj1-pic {
     max-width: 400px;
-    min-width:300px;
+    min-width: 300px;
     }
     .prj2-pic {
     max-width: 300px;
-    min-width:200px;
+    min-width: 200px;
     }
   }
 
   @media screen and (max-width: 754px) {
-    .research-img1 {
-    max-width: 100px;
+    .research-fig {
+    max-width: 500px;
     }
     .research-text {
     margin-top: 10rem;
-    text-align:left;
     }
     .prj1-pic {
         max-width: 100px;
@@ -110,8 +111,8 @@
   }
 
   @media screen and (max-width: 520px) {
-    .research-img1 {
-    max-width: 300px;
+    .research-fig {
+    max-width: 400px;
     min-width: 200px;
     }
     .research-header {
