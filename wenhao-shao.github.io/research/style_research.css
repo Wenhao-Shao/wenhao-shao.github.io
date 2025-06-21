@@ -1,0 +1,111 @@
+  /* styles specifically for research interests page and prj pages  */
+  /* for research interest page  */
+  .research-header {
+    padding-right: 3rem;
+    font-size: 2rem;
+  }
+
+  .research-fig {
+    padding:auto;
+    max-width:1000px;
+  }
+
+  .research-fig img {
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Prevents inline spacing issues */
+    margin: auto; /* Centers the image vertically if needed */
+    padding: auto;
+    width: 100%;
+  }
+
+  .research-intro {
+    min-height: 1vh;
+    width: 90%;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .research-text {
+    position:relative;
+    height:20%;
+    top:20%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 20rem;
+    flex: 1 1 20rem;
+    text-align:justify;
+  }
+
+  .research-title {
+    position:relative;
+    right:0%;
+    height:20%;
+    top:20%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20rem;
+            flex: 1 1 20rem;
+            text-align:left;
+  }
+
+  .research-caption {
+    color:dimgray !important;
+    font-style: italic;
+  }
+
+  /* fit different screens  */
+  @media screen and (max-width: 1176px) {
+    .research-fig {
+      max-width: 800px;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    .research-fig {
+      max-width: 600px;
+    }
+  }
+
+  @media screen and (max-width: 754px) {
+    .research-fig {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .research-header {
+    padding-right: 3rem;
+    font-size: 1rem;
+    }
+    .research-nav ul {
+    margin:0;
+    padding: 1rem;
+    }
+    .research-nav {
+    margin:0;
+    padding: 1rem;
+    }
+    .research-text,
+    .research-title {
+    padding-right: 0;
+    font-size: 1.5rem;
+    margin: 0;
+    }
+
+    /* change the button size  */
+    .return-to-research {
+    font-size:1.5rem;
+    }
+  }
