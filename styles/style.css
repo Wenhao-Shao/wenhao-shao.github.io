@@ -555,17 +555,21 @@ footer ul li a {
 }
 
 #pub-list {
-  list-style-type: none;
-  counter-reset: pubnum;
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 2em; /* Adjust indentation of the entire list */
 }
+
 #pub-list li {
-  counter-increment: pubnum;
-  margin-top: 2em;
+  margin-top: 2em; /* Add margin on top of each list item */
+  position: relative; /* Ensure pseudo-elements are positioned relative to the list item */
 }
+
 #pub-list li::before {
-  content: "[" counter(pubnum) "] ";
-  font-weight: lighter;
-  margin-right: 0.5em;
+  content: "[" counter(list-item) "] "; /* Use the native list-item counter for numbering */
+  font-weight: lighter; /* Customize font weight */
+  margin-right: 0.5em; /* Add spacing between the number and the text */
+  display: inline; /* Ensure the number appears inline with the list item text */
+  /* color: #555; */
 }
 
 
