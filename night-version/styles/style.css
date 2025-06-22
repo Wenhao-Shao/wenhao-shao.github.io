@@ -90,8 +90,8 @@ nav {
   padding: 0.5rem 4rem;
   min-height: 10vh;
   width: 60%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 nav .logo {
@@ -109,8 +109,8 @@ nav .logo {
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20rem;
-          flex: 1 1 20rem;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 nav .logo h1 {
@@ -121,8 +121,9 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -131,8 +132,10 @@ nav ul {
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding: min(2rem,10%);
   /* margin: min(2rem,10%); */
 }
@@ -574,6 +577,7 @@ color:#1a1a1a;
   color: white;
 }
 
+/* adjust the pub-list style  */
 #pub-list {
   list-style-type: none; /* Remove default list styling */
   padding-left: 2em; /* Adjust indentation of the entire list */
@@ -594,41 +598,26 @@ color:#1a1a1a;
 
 /* settings for screen width less than 1176 px */
 @media screen and (max-width: 1176px) {
-html {
-  font-size: 60%;
+  html {
+    font-size: 60%;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    width: 80%;
+  }
 }
-.splash {
-  display: none;
-}
-svg {
-  width: 80%;
-}
-nav {
-  width: 100%;
-}
-}
-
+  
 /* settings for screen width 755 - 870 px */
 @media screen and (max-width: 870px) {
-html {
-  font-size: 60%;
+  .intro {
+    min-height: 50vh;
+  }
 }
-.splash {
-  display: none;
-}
-svg {
-  width: 80%;
-}
-nav {
-  width: 100%;
-}
-.selfie {
-height:200px;
-}
-}
-
- /* settings for screen width less than 754 px */
- @media screen and (max-width: 754px) {
+  
+/* settings for screen width less than 754 px */
+@media screen and (max-width: 754px) {
   .intro {
     min-height: 10vh;
     flex-direction: column;
@@ -639,7 +628,7 @@ height:200px;
     text-align: center;
   }
   .intro-images {
-    order: 0;
+    order: 1;
     text-align: center;
     width: 50%;
   }
@@ -674,31 +663,98 @@ height:200px;
     top: 0px;
     z-index: 3;
   }
-  nav .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+
+  /* Adjust nav so that .logo and buttons arrange vertically, and centered */
+  /* But within the button section, wrap automatically */
+  nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 20rem;
-            flex: 1 1 20rem;
-    margin-top: 1rem;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
+
+  nav .logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      margin-bottom: 1rem;
+  }
+
   nav ul {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 60rem;
-            flex: 1 1 60rem;
-    margin: 2rem 0rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; /* Center the buttons */
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; /* Vertically center the buttons */
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; /* Keep buttons in a row */
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; /* Allow wrapping */
+      width: 100%; /* Ensure the navigation takes up full width */
+      margin: 0 auto; /* Center the <ul> horizontally */
+      padding: 0; /* Remove extra padding */
   }
+
+  nav ul li {
+      margin: 0.3rem; /* Add spacing between buttons */
+      text-align: center; /* Center the text inside each button */
+  }
+
+  nav ul a {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+  }
+
+  /* button setting */
+  /* nonactive for all; active for current  */
+  .nonactive{
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+  .nonactive:hover {
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .active {
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+  }
+  .switch{
+    border-radius: 50%;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  .switch:hover {
+    background-color: #9c9c9c; 
+    color: white;
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+
   footer h4,
   footer h4 a u {
     font-size: 8px;
@@ -707,10 +763,10 @@ height:200px;
     min-height: 10vh;
   }
 }
-  
-  
-  @media screen and (max-width: 520px) {
+
+
+@media screen and (max-width: 520px) {
 
 }
-  
-  /*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
