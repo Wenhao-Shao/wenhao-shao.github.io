@@ -89,7 +89,7 @@ nav {
           flex-direction: row;
   padding: 0.5rem 4rem;
   min-height: 10vh;
-  width: 60%;
+  width: 70%;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -147,19 +147,19 @@ nav ul {
   color: rgb(172, 172, 172);
   border: 2px solid #5c5c5c; 
   border-radius: 2rem;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 }
 .nonactive:hover {
   background-color: #b4b4b4; 
   color: rgb(0, 0, 0);
   border-radius: 2rem;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 }
 
 .active {
   background: #d9d9d9;
   color: rgb(40, 40, 40);
-  padding: 1rem 3rem;
+   padding: 1rem 2rem;
   border-radius: 2rem;
 }
 
@@ -247,6 +247,27 @@ nav ul {
   width: 100%;
 }
 
+.about {
+  min-height: 40vh;
+  width: 90%;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .about-text {
   position:relative;
   right:0%;
@@ -254,6 +275,12 @@ nav ul {
   top:20%;
   text-align:justify;
   width: 70%;
+}
+
+.about p {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #dddddd;
 }
 
 .about-images {
@@ -271,6 +298,80 @@ nav ul {
   margin: auto; /* Centers the image vertically if needed */
   padding: auto;
   width: 70%;
+}
+
+/* News grid: 2 columns, auto-wrap */
+.news-section {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 75vh;  
+}
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  box-sizing: border-box;
+  margin: 0 auto;      /* centers the grid inside news-section */
+}
+
+.news-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background: #000000; /* Brighter than pure black for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+  padding: 1rem;
+  align-items: center;
+  position: relative;
+  border: 1px solid #333; /* subtle border for separation */
+}
+
+.news-images {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.news-text {
+  flex: 2 1 0;
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+.news-text h3 {
+  margin-bottom: 0.5em;
+  color: #fff; /* Ensure title is bright */
+  font-weight: bold;
+}
+
+.news-text p {
+  margin: 0;
+  color: #cccccc; /* Lighter text for readability */
+  font-size: 1.5rem;
+}
+
+.news-date {
+  position: static;
+  top: auto;
+  right: auto;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: #888;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
 }
 
 .splash {
@@ -632,22 +733,47 @@ color:#1a1a1a;
     text-align: center;
     width: 50%;
   }
+
+  .about {
+    min-height: 10vh;
+    flex-direction: column;
+  }
   .about-text {
     margin-top: 0rem;
     text-align: justify;
     width: 100%;
   }
+  .about-text p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #dddddd;
+  }
   .about-images {
     text-align: center;
-    width:100%;
+    width:300px;
   }
-
   .about-images img {
     width: 100%; /* Ensure the image scales to fit the parent div */
     height: auto; /* Maintain the aspect ratio */
     aspect-ratio: 1 / 1; /* Crop the image to a 4:3 aspect ratio */
     object-fit: cover; /* Ensures the image fills the container while maintaining proportions */
     object-position: top; /* Centers the image within the container */
+  }
+
+  .news {
+    grid-template-columns: 1fr;
+  }
+  .news-pair {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.5rem;
+  }
+  .news-images img {
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  .news-text {
+    padding-left: 0;
   }
 
   html {
