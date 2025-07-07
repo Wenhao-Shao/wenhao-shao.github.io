@@ -1,0 +1,879 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+  flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  li,
+  button,
+  label,
+  input,
+  a,
+  p {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+  h2 {
+    font-size: 3rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  h4,
+  h5 {
+    font-size: 1.8rem;
+  }
+  
+  ul {
+    list-style: none;
+    /* padding: auto; */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2c2c2c;
+  }
+  
+  .main-head {
+    width: 100%;
+    margin: 0 0 0 auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    background: white;
+    -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0.5rem 4rem;
+    min-height: 10vh;
+    width: 70%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  
+  nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  
+  nav .logo h1 {
+    margin: 2rem;
+  }
+  
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: min(2rem,10%);
+    /* margin: min(2rem,10%); */
+  }
+  
+  /* button setting */
+  /* nonactive for all; active for current  */
+  .nonactive{
+    background-color: white;
+    color: black;
+    border: 2px solid #9c9c9c; 
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+  }
+  .nonactive:hover {
+    background-color: #9c9c9c; 
+    color: white;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .active {
+    background: #2c2c2c;
+    color: white;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+  }
+  .switch{
+    background-color: white;
+    color: black;
+    border: 2px solid #9c9c9c; 
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+  .switch:hover {
+    background-color: #9c9c9c; 
+    color: white;
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* main text setting */
+  .intro {
+    min-height: 75vh;
+    width: 90%;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  
+  .intro h2 {
+    font-size: 1rem;
+    padding-top: 2rem;
+    /* color setting, ignore for now  */
+    /* background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
+    background: linear-gradient(left, #38d39f, #38a4d3); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .intro h3 {
+    font-size: 4rem;
+    padding: 2rem 0rem;
+  }
+  
+  .intro p {
+    padding-top: 2rem;
+    color: #2c2c2c;
+  }
+  
+  .intro-text,
+  .intro-images {
+    position:relative;
+    height:20%;
+    top:20%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 20rem;
+    flex: 1 1 20rem;
+    text-align:left;
+  }
+
+  .intro-images img {
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Prevents inline spacing issues */
+    margin: auto; /* Centers the image vertically if needed */
+    padding: auto;
+    width: 100%;
+  }
+
+  .about {
+    min-height: 40vh;
+    width: 90%;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .about-text {
+    position:relative;
+    right:0%;
+    height:20%;
+    top:20%;
+    text-align:justify;
+    width: 70%;
+  }
+
+  .about p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #2c2c2c;
+  }
+
+  .about-images {
+    position:relative;
+    right:0%;
+    height:20%;
+    top:20%;
+    text-align:center;
+    width: 30%;
+  }
+
+  .about-images img {
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Prevents inline spacing issues */
+    margin: auto; /* Centers the image vertically if needed */
+    padding: auto;
+    width: 100%;
+  }
+
+  /* News grid: 2 columns, auto-wrap */
+  .news-section {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 75vh;  
+  }
+
+  .news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    box-sizing: border-box;
+    margin: 0 auto;      /* centers the grid inside news-section */
+  }
+
+  .news-pair {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .news-images {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .news-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .news-text {
+    flex: 2 1 0;
+    min-width: 0;
+    padding-left: 1rem;
+  }
+
+  .news-text h3 {
+    margin-bottom: 0.5em;
+    /* font-size: 1.2em; */
+    font-weight: bold;
+  }
+
+  .news-text p {
+    margin: 0;
+    color: dimgray;
+    font-size: 1.5rem;
+  }
+
+  .news-date {
+    position: static;
+    top: auto;
+    right: auto;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: #888;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+  }
+
+  .splash {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  /* for gallery statement */
+  .closing {
+    margin-bottom:30px;
+  }
+
+  /* more-info: for gallery statement specificially */
+  .more-info {
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .more-info p {
+    padding-top: 2rem;
+    color: #2c2c2c;
+  }
+
+
+/* add down arrow */
+  .arrow {
+    border: solid rgb(110, 110, 110);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  /* gallery grid setting  */
+  /* include blur, gray, zoom, fade, slide-down, 
+  slide-up, slide-right, slide-left  */
+  /* .grid {
+    --gap: 16px;
+    --num-cols: 5;
+    --row-height: 250px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+  }
+  .grid>img {
+    width: 100%;
+    height: 170px;
+  } */
+  /* Anything under 1024px */
+  /* @media screen and (max-width: 1024px) {
+    .grid {
+      --num-cols: 2;
+      --row-height: 170px;
+    }
+  } */
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding:5px;
+  gap:5px;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.img-wrapper > .content {
+  position: absolute;
+  inset: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, .4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+  transition: 200ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+  filter: blur(5px);
+}
+
+.img-wrapper:hover > img.gray {
+  filter: grayscale(1);
+}
+
+.img-wrapper:hover > img.zoom {
+  transform: scale(1.1);
+}
+
+.img-wrapper > .content.fade {
+  opacity: 0;
+}
+.img-wrapper:hover > .content.fade {
+  opacity: 1;
+}
+
+.img-wrapper > .content.slide-left {
+  transform: translateX(-100%);
+}
+.img-wrapper:hover > .content.slide-left {
+  transform: translateX(0);
+}
+
+.img-wrapper > .content.slide-right {
+  transform: translateX(100%);
+}
+.img-wrapper:hover > .content.slide-right {
+  transform: translateX(0);
+}
+
+.img-wrapper > .content.slide-down {
+  transform: translateY(-100%);
+}
+.img-wrapper:hover > .content.slide-down {
+  transform: translateY(0);
+}
+
+.img-wrapper > .content.slide-up {
+  transform: translateY(100%);
+}
+.img-wrapper:hover > .content.slide-up {
+  transform: translateY(0);
+}
+.img-wrapper2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper2 > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.img-wrapper2 > .content {
+  position: absolute;
+  inset: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, .4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-wrapper2 > img,
+.img-wrapper2 > .content {
+  transition: 200ms ease-in-out;
+}
+
+.img-wrapper2:hover > img.blur {
+  filter: blur(5px);
+}
+
+.img-wrapper2:hover > img.gray {
+  filter: grayscale(1);
+}
+
+.img-wrapper2:hover > img.zoom {
+  transform: scale(1.1);
+}
+
+.img-wrapper2 > .content.fade {
+  opacity: 0;
+}
+.img-wrapper2:hover > .content.fade {
+  opacity: 1;
+}
+
+
+.image__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align:center;
+}
+
+.image__description {
+  font-size: 0.75em;
+  margin-top: 0.25em;
+  text-align:center;
+}
+
+/* another set up img setting. slide in all imgs at once. */
+/* Animation */
+/* .desktop-image.slide-in {
+animation: slideInFromRightDesktop 0.7s ease-out forwards; 
+position: relative;
+left: 15%; 
+opacity: 0;
+}
+
+.mobile-image.slide-in {
+animation: slideInFromRightMobile 0.7s ease-out forwards; 
+position: relative;
+left: 50%; 
+opacity: 0;
+} */
+
+
+/* footer setting  */
+footer {
+  background: #ebebeb;
+  color: black;
+  min-height: 2vh;
+  padding: 2% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width:100%;
+  bottom:0;
+  left:0;
+}
+  
+footer ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer h4,
+footer h4 a u {
+  font-size:10px;
+}
+footer ul li a {
+  color:#f9f9f9;
+}
+
+/* adjust the pub-list style  */
+#pub-list {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 2em; /* Adjust indentation of the entire list */
+}
+
+#pub-list li {
+  margin-top: 2em; /* Add margin on top of each list item */
+  position: relative; /* Ensure pseudo-elements are positioned relative to the list item */
+}
+
+#pub-list li::before {
+  content: "[" counter(list-item) "] "; /* Use the native list-item counter for numbering */
+  font-weight: lighter; /* Customize font weight */
+  margin-right: 0.5em; /* Add spacing between the number and the text */
+  display: inline; /* Ensure the number appears inline with the list item text */
+  /* color: #555; */
+}
+
+
+/* settings for screen width less than 1176 px */
+@media screen and (max-width: 1176px) {
+  html {
+    font-size: 60%;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    width: 80%;
+  }
+}
+  
+/* settings for screen width 755 - 870 px */
+@media screen and (max-width: 870px) {
+  .intro {
+    min-height: 50vh;
+  }
+}
+  
+/* settings for screen width less than 754 px */
+@media screen and (max-width: 754px) {
+  .intro {
+    min-height: 10vh;
+    flex-direction: column;
+  }
+  .intro-text {
+    order: 2;
+    margin-top: 0rem;
+    text-align: center;
+  }
+  .intro-images {
+    order: 1;
+    text-align: center;
+    width: 50%;
+  }
+
+  .about {
+    min-height: 10vh;
+    flex-direction: column;
+  }
+  .about-text {
+    margin-top: 0rem;
+    text-align: justify;
+    width: 100%;
+  }
+  .about p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #2c2c2c;
+  }
+  .about-images {
+    text-align: center;
+    width: 300px;
+  }
+  .about-images img {
+    width: 100%; /* Ensure the image scales to fit the parent div */
+    height: auto; /* Maintain the aspect ratio */
+    aspect-ratio: 1 / 1; /* Crop the image to a 4:3 aspect ratio */
+    object-fit: cover; /* Ensures the image fills the container while maintaining proportions */
+    object-position: top; /* Centers the image within the container */
+  }
+
+  .news {
+    grid-template-columns: 1fr;
+  }
+  .news-pair {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.5rem;
+  }
+  .news-images img {
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1rem;
+  }
+  .news-text {
+    padding-left: 0;
+  }
+
+  html {
+    font-size: 45%;
+  }
+  svg {
+    height: 30%;
+  }
+  .main-head {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+  }
+
+  /* Adjust nav so that .logo and buttons arrange vertically, and centered */
+  /* But within the button section, wrap automatically */
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav .logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      margin-bottom: 1rem;
+  }
+
+  nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; /* Center the buttons */
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; /* Vertically center the buttons */
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; /* Keep buttons in a row */
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; /* Allow wrapping */
+      width: 100%; /* Ensure the navigation takes up full width */
+      margin: 0 auto; /* Center the <ul> horizontally */
+      padding: 0; /* Remove extra padding */
+  }
+
+  nav ul li {
+      margin: 0.3rem; /* Add spacing between buttons */
+      text-align: center; /* Center the text inside each button */
+  }
+
+  nav ul a {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+  }
+
+  /* button setting */
+  /* nonactive for all; active for current  */
+  .nonactive{
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+  .nonactive:hover {
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .active {
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+  }
+  .switch{
+    border-radius: 50%;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  .switch:hover {
+    background-color: #9c9c9c; 
+    color: white;
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+
+  footer h4,
+  footer h4 a u {
+    font-size: 8px;
+  }
+  footer {
+    min-height: 10vh;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+
+}
+
+/*# sourceMappingURL=style.css.map */
