@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-0V2HS5NSS6');
-</script>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <meta
-        name="description"
-        content="Wenhao Shao | Portfolio"
-      />
-      <meta name="robots" content="index,follow" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
-        rel="stylesheet"
-      />
+      gtag('config', 'G-0V2HS5NSS6');
+    </script>
 
-      <link rel="stylesheet" href="../../styles/style.css" />
-      <link rel="stylesheet" href="../style_research.css">
-      <link rel="icon" href="../../icons/SWH_logo.png" />
-      <title>Wenhao Shao | Portfolio</title>
+    <!-- automatically loading the head -->
+    <script>
+      fetch('../../../BODY/head-body.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('head-body').outerHTML = html;
+        });
+    </script>
+    <div id="head-body"></div>
+    
+    <!-- The rest of your head (title, styles, etc.) -->
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link rel="stylesheet" href="../style_research.css">
+    <link rel="icon" href="../../icons/SWH_logo.png" />
+  </head>
 
-    </head>
-
-    <body>
-      <div id="prj1-body"></div>
-      <script>
-        fetch("../../../BODY/prj1-body.html")
-          .then(response => response.text())
-          .then(html => {
-            // Replace all "which_version" with "night_version"
-            html = html.replace(/which-version/g, 'night-version');
-            document.getElementById('prj1-body').innerHTML = html;
-          });
-      </script>         
-    </body>
+  <body>
+    <div id="prj1-body"></div>
+    <script>
+      fetch("../../../BODY/prj1-body.html")
+        .then(response => response.text())
+        .then(html => {
+          // Replace all "which_version" with "night_version"
+          html = html.replace(/which-version/g, 'night-version');
+          document.getElementById('prj1-body').innerHTML = html;
+        });
+    </script>         
+  </body>
 
 </html>
