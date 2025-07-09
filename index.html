@@ -1,8 +1,44 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=day-version/">
+    <meta charset="UTF-8">
+    <title>Welcome...</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #111;
+        margin: 0;
+      }
+      .splash-gif {
+        max-width: 90vw;
+        max-height: 80vh;
+      }
+      .redirect-msg {
+        color: #fff;
+        margin-top: 1rem;
+        font-family: sans-serif;
+        font-size: 1.2rem;
+      }
+    </style>
+    <script>
+      // Set this to your GIF's duration in milliseconds
+      const gifDuration = 5000; // 3 seconds
+      window.onload = function() {
+        setTimeout(function() {
+          window.location.href = "day-version/";
+        }, gifDuration);
+      };
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="3; url=day-version/">
+    </noscript>
   </head>
   <body>
-    <p>Redirecting to <a href="day-version/">day-version/</a></p>
+    <img class="splash-gif" src="./opening.gif" alt="W. Shao Laboratory, 2025" />
+    <div class="redirect-msg">W. Shao Laboratory ©2025</div>
   </body>
 </html>
