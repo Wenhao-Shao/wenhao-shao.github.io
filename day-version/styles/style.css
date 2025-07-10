@@ -237,7 +237,7 @@
   }
 
   .about {
-    min-height: 40vh;
+    min-height: 20vh;
     width: 90%;
     margin: auto;
     -ms-flex-wrap: wrap;
