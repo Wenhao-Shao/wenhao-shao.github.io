@@ -33,8 +33,10 @@
       fetch("../../BODY/about-body.html")
         .then(response => response.text())
         .then(html => {
-          // Replace all "which-version" with "night-version"
-          html = html.replace(/which-version/g, 'night-version');
+          // Replace all "switch-version" with "night-version". This is for switch only.
+          html = html.replace(/switch-version/g, 'night-version');
+          // Replace all "which_version" with "day-version". This is for loading files from root.
+          html = html.replace(/which-version/g, 'day-version');
           document.getElementById('about-body').innerHTML = html;
 
           // Modal logic: add event listeners after content is injected
