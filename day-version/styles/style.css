@@ -239,7 +239,7 @@
   .about {
     min-height: 20vh;
     width: 90%;
-    margin: auto;
+    margin: 2rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     display: -webkit-box;
@@ -676,6 +676,72 @@ footer ul li a {
   /* color: #555; */
 }
 
+/* Floating modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(220, 220, 220, 0.7); /* lighter overlay for day */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff; /* white background for day */
+  color: #222;      /* dark text for day */
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12); /* lighter shadow */
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #888; /* darker for day */
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.close-modal:hover {
+  color: #222;
+}
+
+/* Style form fields for day mode */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #bbb; /* lighter border */
+  background: #f9f9f9;    /* light background */
+  color: #222;            /* dark text */
+}
+
+.modal-content button[type="submit"] {
+  background: #e0e0e0; /* light button */
+  color: #222;
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.modal-content button[type="submit"]:hover {
+  background: #bbb;
+}
 
 /* settings for screen width less than 1176 px */
 @media screen and (max-width: 1176px) {
@@ -844,7 +910,6 @@ footer ul li a {
     border-radius: 2rem;
     padding: 0.5rem 2rem;
   }
-
   .active {
     padding: 0.5rem 2rem;
     border-radius: 2rem;

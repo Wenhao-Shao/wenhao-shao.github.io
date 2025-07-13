@@ -24,7 +24,7 @@
 
 <section class="about" style="min-height: 10vh;">
   <div class="about-images">
-    <img src="./about_Wenhao Shao.jpg" alt="Wenhao is supposed to show up here" style="width: 70%;">
+    <img src="./about_Wenhao_Shao.jpg" alt="Wenhao is supposed to show up here" style="width: 70%;">
   </div>
 
   <div class="about-text">
@@ -58,13 +58,21 @@
       swh@uga.edu
     </li>
     
-    <p style="padding-bottom: 0rem;padding-top: 1rem;">
+    <!-- <p style="padding-bottom: 0rem;padding-top: 1rem;">
       <a href="../about/CV_Wenhao Shao_25.6.15.pdf" download="Wenhao_Shao_CV"> 
         <button class="nonactive">Download Full CV</button> 
       </a> 
-    </p>
-    
-    <p style="padding-bottom:1rem"><strong><u>Leave a message</u> </strong></p>
+    </p> -->
+  
+    <!-- Leave a message trigger -->
+    <!-- <p style="padding-bottom: 1rem;">
+      <button class="nonactive" id="open-message-modal" style="cursor:pointer;">
+        Leave a message
+      </button>
+    </p> -->
+
+    <!-- Old leave a message box with everything on the page -->
+    <!-- <p style="padding-bottom:1rem"><strong><u>Leave a message</u> </strong></p>
     <form action="https://formspree.io/f/mnnvojry" method="POST">
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name" required><br>
@@ -73,8 +81,16 @@
       <label for="comment">Comment:</label><br>
       <textarea id="comment" name="comment" rows="4" required></textarea><br>
       <button type="submit">Send</button>
-    </form>
-  
+    </form> -->
+
+    <p style="padding-bottom: 0rem; padding-top: 1rem; display: flex; gap: 1rem; justify-content: left;">
+      <button class="nonactive" id="open-message-modal" style="cursor:pointer;">
+        Leave a message
+      </button>
+      <a href="../about/CV_Wenhao Shao_25.6.15.pdf" download="Wenhao_Shao_CV">
+        <button class="nonactive">Download Full CV</button>
+      </a>
+    </p>
   </div>
 </section>
 
@@ -83,6 +99,7 @@
   <hr style="margin: 3rem 0 1rem 0; border: 0; border-top: 1px solid #808080; width: 80%;" />
   <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 500; letter-spacing: 1px;">Group Member</h2>
 </div>
+
 <section class="about">
   <div class="about-images">
     <img src="./about_default.png" alt="Someone is supposed to show up here" style="width: 70%;">
@@ -94,6 +111,7 @@
     </p>
   </div>
 </section>
+
 <section class="about">
   <div class="about-images">
     <img src="./about_Snowball_pom.jpg" alt="Someone is supposed to show up here" style="width: 70%;">
@@ -109,6 +127,22 @@
     </li>
   </div>
 </section>
+
+<!-- Modal for the form -->
+<div id="message-modal" class="modal-overlay" style="display:none;">
+  <div class="modal-content">
+    <span class="close-modal" id="close-message-modal">&times;</span>
+    <form action="https://formspree.io/f/mnnvojry" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="comment">Comment:</label><br>
+      <textarea id="comment" name="comment" rows="4" required></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
 
 <footer>
   <h4><a href="https://www.linkedin.com/in/cali-li/"><u>Website Developed by Cali Li</u></a> <br>

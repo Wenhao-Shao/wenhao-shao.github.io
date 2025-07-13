@@ -33,9 +33,28 @@
       fetch("../../BODY/about-body.html")
         .then(response => response.text())
         .then(html => {
-          // Replace all "which_version" with "night_version"
+          // Replace all "which-version" with "night-version"
           html = html.replace(/which-version/g, 'night-version');
           document.getElementById('about-body').innerHTML = html;
+
+          // Modal logic: add event listeners after content is injected
+          var openModal = document.getElementById('open-message-modal');
+          var closeModal = document.getElementById('close-message-modal');
+          var modal = document.getElementById('message-modal');
+          if (openModal && closeModal && modal) {
+            openModal.onclick = function(e) {
+              e.preventDefault();
+              modal.style.display = 'flex';
+            };
+            closeModal.onclick = function() {
+              modal.style.display = 'none';
+            };
+            modal.onclick = function(e) {
+              if (e.target === modal) {
+                modal.style.display = 'none';
+              }
+            };
+          }
         });
     </script>
   </body>
