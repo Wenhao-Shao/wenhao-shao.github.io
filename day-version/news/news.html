@@ -33,8 +33,10 @@
       fetch("../../BODY/news-body.html")
         .then(response => response.text())
         .then(html => {
-          // Replace all "which_version" with "night_version"
-          html = html.replace(/which-version/g, 'night-version');
+          // Replace all "switch-version" with "night-version". This is for switch only.
+          html = html.replace(/switch-version/g, 'night-version');
+          // Replace all "which_version" with "day-version". This is for loading files from root.
+          html = html.replace(/which-version/g, 'day-version');
           document.getElementById('news-body').innerHTML = html;
         });
     </script>
