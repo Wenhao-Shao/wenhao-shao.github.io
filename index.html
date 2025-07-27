@@ -10,7 +10,7 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: #111;
+        background: #000000;
         margin: 0;
       }
       .splash-gif {
@@ -25,12 +25,35 @@
       }
     </style>
     <script>
-      // Set this to your GIF's duration in milliseconds
-      const gifDuration = 2000; // seconds
+      // GIF is 2.4s total, start fade transition at 2s
+      const gifDuration = 2400; // milliseconds (total GIF duration)
+      const fadeStartTime = 2000; // milliseconds (when to start fade)
+      
       window.onload = function() {
+        // Preload the next page by creating a hidden iframe
+        const preloadFrame = document.createElement('iframe');
+        preloadFrame.src = "day-version/";
+        preloadFrame.style.display = 'none';
+        preloadFrame.style.position = 'absolute';
+        preloadFrame.style.top = '-9999px';
+        document.body.appendChild(preloadFrame);
+        
+        // Also preload using link prefetch for better compatibility
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = "day-version/";
+        document.head.appendChild(link);
+        
+        // Start fade transition at 2s to let GIF finish playing
         setTimeout(function() {
-          window.location.href = "day-version/";
-        }, gifDuration);
+          document.body.style.transition = 'opacity 0.4s ease-out';
+          document.body.style.opacity = '0';
+          
+          // Navigate after fade completes (400ms later, at 2.4s total)
+          setTimeout(function() {
+            window.location.replace("day-version/");
+          }, 400);
+        }, fadeStartTime);
       };
     </script>
     <noscript>
