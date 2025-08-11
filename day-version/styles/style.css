@@ -327,6 +327,9 @@
   .news-images img {
     width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
     display: block;
     border-radius: 4px;
   }
@@ -815,8 +818,11 @@ footer ul li a {
     padding: 1rem 0.5rem;
   }
   .news-images img {
+    width: 150px;
     height: 150px;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
     margin-bottom: 1rem;
   }
   .news-text {
