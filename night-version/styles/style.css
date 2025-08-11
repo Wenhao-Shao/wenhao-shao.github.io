@@ -328,12 +328,14 @@ nav ul {
   border: 1px solid #333; /* subtle border for separation */
 }
 
-.news-images {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.news-images img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 4px;
 }
 
 .news-images img {
@@ -836,7 +838,11 @@ color:#1a1a1a;
     padding: 1rem 0.5rem;
   }
   .news-images img {
+    width: 150px;
     height: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
     margin-bottom: 1rem;
   }
   .news-text {
