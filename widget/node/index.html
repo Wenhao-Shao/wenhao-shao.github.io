@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Graph</title>
+    <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <h1>Interactive Node Graph Editor</h1>
+    
+    <div class="controls">
+        <div class="control-group">
+            <button onclick="clearGraph()">Clear All</button>
+            <button onclick="exportGraph()">Export JSON</button>
+            <button onclick="exportHTML()">Export HTML</button>
+            <button onclick="document.getElementById('importFile').click()">Import JSON</button>
+            <input type="file" id="importFile" style="display: none;" accept=".json" onchange="importGraph(event)">
+            <button onclick="togglePhysics()" id="physicsButton">Enable Physics</button>
+            <button onclick="setMode('addNode')" id="addNodeBtn" class="mode-btn">Add Nodes</button>
+            <button onclick="setMode('addEdge')" id="addEdgeBtn" class="mode-btn">Add Edges</button>
+            <button onclick="setMode('edit')" id="editBtn" class="mode-btn">Edit/Move</button>
+            <button onclick="openGroupManager()" class="mode-btn">Manage Groups</button>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <div id="groupsDisplay" class="control-group">
+            <!-- Groups will be displayed here -->
+        </div>
+    </div>
+    
+    <div id="network"></div>
+    
+    <!-- Comment Tooltip -->
+    <div id="nodeTooltip" style="display: none; position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; max-width: 300px; z-index: 1000; font-size: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+        <div id="tooltipTitle" style="font-weight: bold; margin-bottom: 5px;"></div>
+        <div id="tooltipComment"></div>
+    </div>
+    
+    <div class="instructions">
+        <ul>
+            <li><strong>Add Node Mode:</strong> Double-click anywhere to add a new node</li>
+            <li><strong>Add Edge Mode:</strong> Click on two nodes to connect them</li>
+            <li><strong>Edit/Move Mode:</strong> Drag nodes to move them, double-click nodes to edit/delete</li>
+            <li><strong>Comments:</strong> Single-click any node to view its comment</li>
+            <li><strong>Group Toggle:</strong> Click group buttons above to show/hide all nodes in that group</li>
+            <li><strong>Delete Edges:</strong> Select edges and press Delete key</li>
+            <li><strong>Delete Nodes:</strong> Use Edit/Move mode, double-click node, then click Delete button</li>
+        </ul>
+    </div>
+    
+    <!-- Node Edit Modal -->
+    <div id="nodeModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Node</h3>
+            <label>Label:</label>
+            <input type="text" id="nodeLabel" placeholder="Node label">
+            <label>Group:</label>
+            <select id="nodeGroup">
+                <!-- Groups will be populated dynamically -->
+            </select>
+            <label>Comment:</label>
+            <textarea id="nodeComment" placeholder="Enter a description or comment..." rows="3" style="width: 100%; margin: 5px 0; resize: vertical;"></textarea>
+            <br><br>
+            <button onclick="saveNodeEdit()">Save</button>
+            <button onclick="deleteCurrentNode()" style="background-color: #f44336;">Delete</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Group Management Modal -->
+    <div id="groupModal" class="modal">
+        <div class="modal-content" style="width: 500px;">         
+            <div class="control-group">
+                <h4>Add New Group</h4>
+                <label>ID:</label>
+                <input type="text" id="newGroupId" placeholder="e.g., 'design', 'backend'">
+                <label>Name:</label>
+                <input type="text" id="newGroupName" placeholder="Display name">
+                <label>Background Color:</label>
+                <input type="color" id="newGroupBgColor" value="#93B5C6">
+                <label>Border Color:</label>
+                <input type="color" id="newGroupBorderColor" value="#5A8AAA">
+                <br>
+                <button onclick="addNewGroup()">Add Group</button>
+            </div>
+            
+            <div class="control-group">
+                <h4>Existing Groups</h4>
+                <div id="existingGroups" style="max-height: 300px; overflow-y: auto;">
+                    <!-- Existing groups will be listed here -->
+                </div>
+            </div>
+            
+            <br>
+            <button onclick="closeGroupModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
