@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.controls {
+    margin: 0;
+    padding: 8px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.control-group {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.control-group button {
+    white-space: nowrap;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+input, select, button {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+button {
+    background: #505050;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #777777;
+}
+
+button.delete {
+    background: #f44336;
+}
+
+button.delete:hover {
+    background: #da190b;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.instructions {
+    margin: 0;
+    padding: 10px;
+    background: #f5f5f5;
+    border-left: 4px solid #505050;
+    border-radius: 0 5px 5px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* Specific positioning for the group management modal */
+#groupModal .modal-content {
+    margin: 5% auto;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal input {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.group-color-preview {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid;
+}
+
+.group-info {
+    flex-grow: 1;
+}
+
+.group-actions {
+    margin-left: 10px;
+}
+
+.group-actions button {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 0 2px;
+}
+
+.groups-display-item {
+    display: inline-block;
+    margin: 2px 5px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    border: 2px solid;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: none; /* Override default button background */
+}
+
+.groups-display-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive design adjustments */
+@media (max-height: 600px) {
+    body {
+        padding: 5px;
+        grid-gap: 5px;
+    }
+    
+    .controls {
+        padding: 5px;
+    }
+    
+    .instructions {
+        padding: 8px;
+    }
+    
+    #network {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .control-group {
+        /* flex-direction: column; */
+        align-items: stretch;
+    }
+    
+    .control-group button {
+        margin: 2px 0;
+    }
+}
