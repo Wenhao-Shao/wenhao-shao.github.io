@@ -9,11 +9,12 @@
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
-    <h1>Interactive Node Graph Editor</h1>
+    <h3>Interactive Node Graph Editor</h3>
     
     <div class="controls">
         <div class="control-group">
             <button onclick="window.location.href='/index.html'">Home</button>
+            <button onclick="toggleInstructions()" id="instructionsBtn">Guide</button>
             <button onclick="clearGraph()">Clear All</button>
             <button onclick="exportGraph()">Export JSON</button>
             <button onclick="exportHTML()">Export HTML</button>
@@ -25,9 +26,6 @@
             <button onclick="setMode('edit')" id="editBtn" class="mode-btn">Edit/Move</button>
             <button onclick="openGroupManager()">Manage Groups</button>
         </div>
-    </div>
-    
-    <div class="controls">
         <div id="groupsDisplay" class="control-group">
             <!-- Groups will be displayed here -->
         </div>
@@ -36,8 +34,8 @@
     <div id="network"></div>
     
     <!-- Comment Tooltip -->
-    <div id="nodeTooltip" style="display: none; position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; max-width: 300px; z-index: 1000; font-size: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-        <div id="tooltipTitle" style="font-weight: bold; margin-bottom: 5px;"></div>
+    <div id="nodeTooltip">
+        <div id="tooltipTitle"></div>
         <div id="tooltipComment"></div>
     </div>
     

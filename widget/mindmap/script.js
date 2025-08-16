@@ -1102,3 +1102,8 @@ function importGraph(event) {
     reader.readAsText(file);
     event.target.value = ''; // Clear the input
 }
+
+function toggleInstructions() {
+    const instructions = document.querySelector('.instructions');
+    instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+}
