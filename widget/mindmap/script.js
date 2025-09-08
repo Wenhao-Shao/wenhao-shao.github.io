@@ -1,8 +1,8 @@
 // Interactive Node Graph Editor
 let nodes = new vis.DataSet([
-    { id: 1, label: 'Apple', group: 'Person', comment: '', x: 0, y: 0 },
-    { id: 2, label: 'Banana', group: 'Person', comment: '', x: -200, y: -50 },
-    { id: 3, label: 'Catepillar', group: 'Person', comment: '', x: -200, y: 150 },
+    { id: 1, label: 'Apple', group: 'A', comment: '', x: 0, y: 0 },
+    { id: 2, label: 'Banana', group: 'B', comment: '', x: -200, y: -50 },
+    { id: 3, label: 'Catepillar', group: 'C', comment: '', x: -200, y: 150 },
 ]);
 
 let edges = new vis.DataSet([
@@ -18,14 +18,19 @@ let physicsEnabled = false;
 let selectedNodeForEdge = null;
 let editingNodeId = null;
 
+// Presentation mode variables
+let presentationMode = false;
+let originalNodeOpacities = {}; // Store original opacities
+let highlightedNodes = new Set(); // Track which nodes have been clicked/highlighted
+
 // Group visibility tracking - all groups are visible by default
 let groupVisibility = {};
 
 // Dynamic groups management
 let customGroups = {
-    A: { name: 'Project', color: { background: '#93B5C6', border: '#5A8AAA' } },
-    B: { name: 'Type', color: { background: '#F0CF65', border: '#D4B943' } },
-    C: { name: 'Person', color: { background: '#D7816A', border: '#C16648' } },
+    A: { name: 'A', color: { background: '#93B5C6', border: '#5A8AAA' }, shape: 'box' },
+    B: { name: 'B', color: { background: '#F0CF65', border: '#D4B943' }, shape: 'diamond' },
+    C: { name: 'C', color: { background: '#D7816A', border: '#C16648' }, shape: 'dot' },
 };
 
 // Network options
@@ -42,8 +47,8 @@ function getNetworkOptions() {
             shadow: true
         },
         edges: {
-            width: 2,
-            color: '#999',
+            width: 1,
+            color: '#9999',
             shadow: true,
             smooth: {
                 type: 'continuous'
@@ -96,7 +101,10 @@ function setupEventListeners() {
     
     // Single click for edge creation or showing comments
     network.on('click', function(params) {
-        if (currentMode === 'addEdge' && params.nodes.length > 0) {
+        if (presentationMode && params.nodes.length > 0) {
+            // In presentation mode, clicking a node highlights it (removes transparency)
+            highlightNodeInPresentation(params.nodes[0]);
+        } else if (currentMode === 'addEdge' && params.nodes.length > 0) {
             hideNodeTooltip(); // Hide tooltip when in edge mode
             handleEdgeCreation(params.nodes[0]);
         } else if (params.nodes.length > 0) {
@@ -365,9 +373,99 @@ function setMode(mode) {
             document.getElementById('editBtn').style.background = '#777777';
             document.getElementById('network').style.cursor = 'default';
             break;
+        case 'presentation':
+            document.getElementById('presentationBtn').style.background = '#777777';
+            document.getElementById('network').style.cursor = 'pointer';
+            break;
     }
     
     console.log('Mode changed to:', mode);
+}
+
+// Toggle presentation mode
+function togglePresentationMode() {
+    presentationMode = !presentationMode;
+    
+    if (presentationMode) {
+        // Enter presentation mode - make all nodes 75% transparent
+        setMode('presentation');
+        
+        // Store original node opacities
+        originalNodeOpacities = {};
+        const nodeUpdate = [];
+        
+        nodes.forEach((node) => {
+            originalNodeOpacities[node.id] = node.opacity !== undefined ? node.opacity : 1;
+            nodeUpdate.push({
+                id: node.id,
+                opacity: 0.25,
+                font: { color: 'transparent' }  // Make text transparent
+            });
+        });
+        
+        nodes.update(nodeUpdate);
+        
+        // Update button text
+        document.getElementById('presentationBtn').textContent = 'Exit Present';
+        
+        console.log('Entered presentation mode');
+    } else {
+        // Exit presentation mode - restore original opacities
+        const nodeUpdate = [];
+        
+        nodes.forEach((node) => {
+            const originalOpacity = originalNodeOpacities[node.id] || 1;
+            nodeUpdate.push({
+                id: node.id,
+                opacity: originalOpacity,
+                font: { color: null }  // Restore text color to default
+            });
+        });
+        
+        nodes.update(nodeUpdate);
+        
+        // Clear tracking variables
+        originalNodeOpacities = {};
+        highlightedNodes.clear();
+        
+        // Reset to edit mode
+        setMode('edit');
+        
+        // Update button text
+        document.getElementById('presentationBtn').textContent = 'Present';
+        
+        console.log('Exited presentation mode');
+    }
+}
+
+// Highlight a node in presentation mode
+function highlightNodeInPresentation(nodeId) {
+    if (!presentationMode) return;
+    
+    if (highlightedNodes.has(nodeId)) {
+        // Node is already highlighted, remove highlight
+        highlightedNodes.delete(nodeId);
+        
+        nodes.update([{
+            id: nodeId,
+            opacity: 0.25,  // Back to 75% transparent
+            font: { color: 'transparent' }  // Make text transparent again
+        }]);
+        
+        console.log('Removed highlight from node:', nodeId);
+    } else {
+        // Highlight the node
+        highlightedNodes.add(nodeId);
+        
+        const originalOpacity = originalNodeOpacities[nodeId] || 1;
+        nodes.update([{
+            id: nodeId,
+            opacity: originalOpacity,  // Back to original opacity (0% transparent)
+            font: { color: '#000' }  // Make text black (non-transparent)
+        }]);
+        
+        console.log('Highlighted node:', nodeId);
+    }
 }
 
 // Toggle physics simulation
@@ -393,10 +491,22 @@ function clearGraph() {
 
 // Export graph data as JSON
 function exportGraph() {
+    // Get current node positions from the network
+    const currentNodes = nodes.get();
+    const nodePositions = network.getPositions();
+    
+    // Update nodes with current positions
+    const nodesWithPositions = currentNodes.map(node => ({
+        ...node,
+        x: nodePositions[node.id] ? nodePositions[node.id].x : node.x,
+        y: nodePositions[node.id] ? nodePositions[node.id].y : node.y
+    }));
+    
     const graphData = {
-        nodes: nodes.get(),
+        nodes: nodesWithPositions,
         edges: edges.get(),
-        nodeIdCounter: nodeIdCounter
+        nodeIdCounter: nodeIdCounter,
+        customGroups: customGroups
     };
     
     const dataStr = JSON.stringify(graphData, null, 2);
@@ -407,7 +517,7 @@ function exportGraph() {
     link.download = 'network-graph.json';
     link.click();
     
-    console.log('Graph exported');
+    console.log('Graph exported with current node positions');
 }
 
 // Import graph data from JSON file
@@ -428,6 +538,28 @@ function importGraph(event) {
             nodes.add(graphData.nodes);
             edges.add(graphData.edges);
             nodeIdCounter = graphData.nodeIdCounter || 1;
+            
+            // Load custom groups if available
+            if (graphData.customGroups) {
+                customGroups = graphData.customGroups;
+                
+                // Ensure backward compatibility - add default shapes if missing
+                Object.keys(customGroups).forEach(groupId => {
+                    if (!customGroups[groupId].shape) {
+                        customGroups[groupId].shape = 'dot';
+                    }
+                });
+                
+                // Update the network with new group options including shapes
+                network.setOptions(getNetworkOptions());
+                
+                // Force refresh of all nodes to apply new group settings
+                const allNodes = nodes.get();
+                nodes.update(allNodes);
+                
+                updateGroupsDisplay();
+                updateNodeGroupOptions();
+            }
             
             console.log('Graph imported successfully');
         } catch (error) {
@@ -459,8 +591,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Auto-save functionality (saves to localStorage every 30 seconds)
 setInterval(function() {
+    // Get current node positions from the network
+    const currentNodes = nodes.get();
+    const nodePositions = network.getPositions();
+    
+    // Update nodes with current positions
+    const nodesWithPositions = currentNodes.map(node => ({
+        ...node,
+        x: nodePositions[node.id] ? nodePositions[node.id].x : node.x,
+        y: nodePositions[node.id] ? nodePositions[node.id].y : node.y
+    }));
+    
     const graphData = {
-        nodes: nodes.get(),
+        nodes: nodesWithPositions,
         edges: edges.get(),
         nodeIdCounter: nodeIdCounter,
         customGroups: customGroups,
@@ -484,7 +627,21 @@ window.addEventListener('load', function() {
             // Restore custom groups if available
             if (graphData.customGroups) {
                 customGroups = graphData.customGroups;
+                
+                // Ensure backward compatibility - add default shapes if missing
+                Object.keys(customGroups).forEach(groupId => {
+                    if (!customGroups[groupId].shape) {
+                        customGroups[groupId].shape = 'dot';
+                    }
+                });
+                
+                // Update the network with new group options including shapes
                 network.setOptions(getNetworkOptions());
+                
+                // Force refresh of all nodes to apply new group settings
+                const allNodes = nodes.get();
+                nodes.update(allNodes);
+                
                 updateGroupsDisplay();
                 updateNodeGroupOptions();
             }
@@ -527,6 +684,7 @@ function closeGroupModal() {
     document.getElementById('newGroupName').value = '';
     document.getElementById('newGroupBgColor').value = '#93B5C6';
     document.getElementById('newGroupBorderColor').value = '#5A8AAA';
+    document.getElementById('newGroupShape').value = 'dot';
 }
 
 // Add a new group
@@ -535,6 +693,7 @@ function addNewGroup() {
     const groupName = document.getElementById('newGroupName').value.trim();
     const bgColor = document.getElementById('newGroupBgColor').value;
     const borderColor = document.getElementById('newGroupBorderColor').value;
+    const shape = document.getElementById('newGroupShape').value;
     
     if (!groupId || !groupName) {
         alert('Please enter both Group ID and Group Name');
@@ -553,7 +712,8 @@ function addNewGroup() {
         color: {
             background: bgColor,
             border: borderColor
-        }
+        },
+        shape: shape
     };
     
     // Initialize visibility for new group
@@ -570,6 +730,7 @@ function addNewGroup() {
     // Clear form
     document.getElementById('newGroupId').value = '';
     document.getElementById('newGroupName').value = '';
+    document.getElementById('newGroupShape').value = 'dot';
     
     console.log('Added new group:', groupId, customGroups[groupId]);
 }
@@ -616,10 +777,34 @@ function editGroup(groupId) {
     const newBorderColor = prompt('Enter border color (hex):', group.color.border);
     if (newBorderColor === null) return;
     
+    // Shape selection with options
+    const shapeOptions = [
+        'dot', 'circle', 'ellipse', 'box', 'text', 'database',
+        'square', 'triangle', 'triangleDown', 'star', 'diamond', 
+        'hexagon', 'image', 'circularImage'
+    ];
+    const shapePrompt = `Choose a shape:\n${shapeOptions.map((s, i) => `${i + 1}. ${s}`).join('\n')}\n\nEnter the number or shape name:`;
+    const shapeInput = prompt(shapePrompt, group.shape || 'dot');
+    if (shapeInput === null) return;
+    
+    // Parse shape input
+    let newShape = group.shape || 'dot';
+    if (/^\d+$/.test(shapeInput)) {
+        // User entered a number
+        const index = parseInt(shapeInput) - 1;
+        if (index >= 0 && index < shapeOptions.length) {
+            newShape = shapeOptions[index];
+        }
+    } else if (shapeOptions.includes(shapeInput)) {
+        // User entered a valid shape name
+        newShape = shapeInput;
+    }
+    
     // Update the group
     customGroups[groupId].name = newName || group.name;
     customGroups[groupId].color.background = newBgColor || group.color.background;
     customGroups[groupId].color.border = newBorderColor || group.color.border;
+    customGroups[groupId].shape = newShape;
     
     // Update the network
     network.setOptions(getNetworkOptions());
@@ -723,7 +908,7 @@ function updateExistingGroupsList() {
             <div class="group-color-preview" style="background-color: ${group.color.background}; border-color: ${group.color.border};"></div>
             <div class="group-info">
                 <strong>${group.name}</strong><br>
-                <small>ID: ${groupId} | BG: ${group.color.background} | Border: ${group.color.border}</small>
+                <small>ID: ${groupId} | Shape: ${group.shape || 'dot'} | BG: ${group.color.background} | Border: ${group.color.border}</small>
             </div>
             <div class="group-actions">
                 <button onclick="editGroup('${groupId}')" title="Edit group">Edit</button>
@@ -767,8 +952,19 @@ function exportGraph() {
 
 // Export graph as standalone HTML file
 function exportHTML() {
+    // Get current node positions from the network
+    const currentNodes = nodes.get();
+    const nodePositions = network.getPositions();
+    
+    // Update nodes with current positions
+    const nodesWithPositions = currentNodes.map(node => ({
+        ...node,
+        x: nodePositions[node.id] ? nodePositions[node.id].x : node.x,
+        y: nodePositions[node.id] ? nodePositions[node.id].y : node.y
+    }));
+    
     const graphData = {
-        nodes: nodes.get(),
+        nodes: nodesWithPositions,
         edges: edges.get(),
         customGroups: customGroups
     };
