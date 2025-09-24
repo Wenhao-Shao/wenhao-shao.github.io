@@ -359,9 +359,8 @@ nav ul {
 
 .news-text h3 {
   margin-bottom: 0.5em;
-  color: #fff; /* Ensure title is bright */
+  color: #ffffff; /* Ensure title is bright */
   font-weight: bold;
-  color: inherit;
   text-decoration: none;
 }
 

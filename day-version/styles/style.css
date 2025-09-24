@@ -357,7 +357,8 @@ nav ul {
   cursor: pointer;
 }
 
-.news-text p {
+.news-text p,
+.news-text a {
   margin: 0;
   color: dimgray;
   font-size: 1.5rem;
