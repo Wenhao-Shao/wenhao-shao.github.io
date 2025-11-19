@@ -824,6 +824,10 @@ color:#1a1a1a;
     text-align: justify;
     width: 100%;
   }
+  .about-text h3 {
+    text-align: center;
+    margin-top: 1rem
+  }
   .about-text p {
     padding-top: 2rem;
     padding-bottom: 2rem;

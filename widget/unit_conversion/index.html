@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0V2HS5NSS6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion Widget - Shao Lab</title>
+    <link rel="stylesheet" href="../../day-version/styles/style.css" />
+    <link rel="icon" href="../../day-version/icons/SWH_logo.png" />
+    
+    <style>
+        .widget-container {
+            max-width: 1400px;
+            margin: 120px auto 40px;
+            padding: 40px 20px;
+        }
+
+        .widget-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+        }
+
+        .widget-content h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            font-size: 2em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .conversion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+
+        .input-group input {
+            padding: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 2em;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .note {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 2em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .note a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .conversion-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .conversion-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .widget-content {
+                padding: 25px;
+            }
+
+            .widget-content h1 {
+                font-size: 1.8em;
+            }
+
+            .section h2 {
+                font-size: 1.4em;
+            }
+
+            .input-group label {
+                font-size: 1em;
+            }
+
+            .input-group input {
+                font-size: 1em;
+                padding: 14px;
+            }
+
+            .widget-container {
+                margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../day-version/index.html">
+                    <img src="../../day-version/icons/SWH_logo.png" alt="logo" width="80px" height="70px"/>
+                </a>
+            </div>
+            <ul>
+                <li><a class="nonactive" href="../../day-version/index.html">Home</a></li>
+                <li><a class="nonactive" href="../../day-version/news/news.html">News</a></li>
+                <li><a class="nonactive" href="../../day-version/about/about.html">About</a></li>
+                <li><a class="nonactive" href="../../day-version/research/research.html">Research</a></li>
+                <li><a class="nonactive" href="../../day-version/facility/facility.html">Facility</a></li>
+                <li><a class="nonactive" href="../../day-version/publications/publications.html">Publications</a></li>
+                <li><a class="active" href="../../day-version/fun/fun.html">Fun</a></li>
+                <a class="switch" href="../../night-version/fun/fun.html">
+                    <img src="../../day-version/icons/day_night.png" alt="switch" width="20px" height="20px"/>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Widget Content -->
+    <div class="widget-container">
+        <div class="widget-content">
+            <h1>Unit Conversion Widget</h1>
+
+            <div class="section">
+                <h2>Energy Units</h2>
+                <div class="conversion-grid">
+                    <div class="input-group">
+                        <label for="hartree">Hartree (Eh)</label>
+                        <input type="number" id="hartree" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="ev">Electron Volts (eV)</label>
+                        <input type="number" id="ev" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="kcal">kcal/mol</label>
+                        <input type="number" id="kcal" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="kj">kJ/mol</label>
+                        <input type="number" id="kj" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="wavenumber">cm⁻¹ (Wavenumber)</label>
+                        <input type="number" id="wavenumber" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="hz">Hz (Frequency)</label>
+                        <input type="number" id="hz" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="kelvin">Kelvin (K)</label>
+                        <input type="number" id="kelvin" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="joule">Joule (J)</label>
+                        <input type="number" id="joule" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="nm">Nanometer (nm)</label>
+                        <input type="number" id="nm" placeholder="0" step="any">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Length Units</h2>
+                <div class="conversion-grid">
+                    <div class="input-group">
+                        <label for="angstrom">Ångström (Å)</label>
+                        <input type="number" id="angstrom" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="nanometer">Nanometer (nm)</label>
+                        <input type="number" id="nanometer" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="bohr">Bohr (a₀)</label>
+                        <input type="number" id="bohr" placeholder="0" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label for="meter">Meter (m)</label>
+                        <input type="number" id="meter" placeholder="0" step="any">
+                    </div>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>Note:</strong> Enter a value in any field to see conversions in all other units. 
+                Conversions are based on CODATA recommended values.
+            </div>
+
+            <div class="note" style="margin-top: 15px;">
+                <strong>Reference:</strong> 
+                <a href="https://physics.nist.gov/cuu/Constants/factors.html" target="_blank">
+                    NIST Fundamental Physical Constants - Energy Conversion Factors
+                </a>
+            </div>
+
+            <div class="note" style="margin-top: 15px;">
+                <strong>Energy Equivalence Relations:</strong><br>
+                <em>E = mc² = hc/λ = hν = kT</em>; <br>
+                1 eV = (e/C) J, 1 u = m<sub>u</sub> = ¹⁄₁₂m(¹²C), and E<sub>h</sub> = 2R<sub>∞</sub>hc = α²m<sub>e</sub>c² is the Hartree energy (hartree).
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h4>
+            <a href="https://www.linkedin.com/in/cali-li/"><u>Website Developed by Cali Li</u></a> <br>
+            wenjingli199707 at gmail dot com <br>
+            &copy;Copyright &copy;2024 All rights reserved
+        </h4>
+
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/wenhao-shao/" target="_blank">
+                    <img src="../../day-version/icons/linkedin.svg" alt="linkedin-social" height="40px"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/whshao" target="_blank">
+                    <img src="../../day-version/icons/twitter.svg" alt="twitter-social" height="40px"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.chem.uga.edu/directory/people/wenhao-shao" target="_blank">
+                    <img src="../../day-version/icons/UGA.svg" alt="UGA-profile" height="40px"/>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        // Energy conversion factors (all relative to Hartree)
+        const energyConversions = {
+            hartree: 1,
+            ev: 27.211386245981, // checked 251030 based on NIST table
+            kcal: 627.5096080305927, // checked 251030, based on https://www.colby.edu/chemistry/PChem/Hartree.html
+            kj: 2625.5002, // checked 251030, based on https://www.colby.edu/chemistry/PChem/Hartree.html
+            wavenumber: 219474.63136314, //checked 251030 based on NIST table
+            hz: 6.5796839204999e15, // checked 251030 based on NIST table
+            kelvin: 315775.02480399, // checked 251030  based on NIST table derivation
+            joule: 4.3597447222060e-18, // checked 251030 based on NIST table
+            nm: 45.56335252767 // wavelength in nm (inverse relationship: smaller nm = higher energy)
+        };
+
+        // Length conversion factors (all relative to Ångström)
+        const lengthConversions = {
+            angstrom: 1,
+            nanometer: 0.1,
+            bohr: 1.8897261246257702,
+            meter: 1e-10
+        };
+
+        // Energy unit inputs
+        const energyInputs = {
+            hartree: document.getElementById('hartree'),
+            ev: document.getElementById('ev'),
+            kcal: document.getElementById('kcal'),
+            kj: document.getElementById('kj'),
+            wavenumber: document.getElementById('wavenumber'),
+            hz: document.getElementById('hz'),
+            kelvin: document.getElementById('kelvin'),
+            joule: document.getElementById('joule'),
+            nm: document.getElementById('nm')
+        };
+
+        // Length unit inputs
+        const lengthInputs = {
+            angstrom: document.getElementById('angstrom'),
+            nanometer: document.getElementById('nanometer'),
+            bohr: document.getElementById('bohr'),
+            meter: document.getElementById('meter')
+        };
+
+        // Convert energy units
+        function convertEnergy(fromUnit, value) {
+            // Special handling for wavelength (inverse relationship)
+            let hartreeValue;
+            if (fromUnit === 'nm') {
+                hartreeValue = energyConversions.nm / value;
+            } else {
+                hartreeValue = value / energyConversions[fromUnit];
+            }
+            
+            for (let unit in energyInputs) {
+                if (unit !== fromUnit) {
+                    let convertedValue;
+                    if (unit === 'nm') {
+                        convertedValue = energyConversions.nm / hartreeValue;
+                    } else {
+                        convertedValue = hartreeValue * energyConversions[unit];
+                    }
+                    energyInputs[unit].value = convertedValue.toExponential(10);
+                }
+            }
+        }
+
+        // Convert length units
+        function convertLength(fromUnit, value) {
+            const angstromValue = value / lengthConversions[fromUnit];
+            for (let unit in lengthInputs) {
+                if (unit !== fromUnit) {
+                    const convertedValue = angstromValue * lengthConversions[unit];
+                    lengthInputs[unit].value = convertedValue.toExponential(10);
+                }
+            }
+        }
+
+        // Add event listeners for energy inputs
+        for (let unit in energyInputs) {
+            energyInputs[unit].addEventListener('input', function() {
+                const value = parseFloat(this.value);
+                if (!isNaN(value) && value !== 0) {
+                    convertEnergy(unit, value);
+                } else if (this.value === '' || value === 0) {
+                    // Clear all fields if input is empty or zero
+                    for (let u in energyInputs) {
+                        if (u !== unit) {
+                            energyInputs[u].value = '';
+                        }
+                    }
+                }
+            });
+        }
+
+        // Add event listeners for length inputs
+        for (let unit in lengthInputs) {
+            lengthInputs[unit].addEventListener('input', function() {
+                const value = parseFloat(this.value);
+                if (!isNaN(value) && value !== 0) {
+                    convertLength(unit, value);
+                } else if (this.value === '' || value === 0) {
+                    // Clear all fields if input is empty or zero
+                    for (let u in lengthInputs) {
+                        if (u !== unit) {
+                            lengthInputs[u].value = '';
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
