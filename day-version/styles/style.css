@@ -385,6 +385,36 @@ nav ul {
   z-index: -1;
 }
 
+/* News card for index page - controls layout and animation */
+.news-card {
+  position: absolute;
+  width: 50%;  /* CHANGE: Adjust card width (e.g., 100% for full width) */
+  opacity: 0;
+  transition: opacity 2s ease-in-out;  /* CHANGE: Adjust fade speed (e.g., 0.5s for faster) */
+  padding: 1rem;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.news-card.active {
+  opacity: 1;
+}
+
+/* News image styling */
+.news-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;  /* CHANGE: Image aspect ratio (e.g., 16 / 9 for landscape) */
+  object-fit: cover;
+  border-radius: 8px;  /* CHANGE: Image corner roundness (0px for square) */
+  margin-bottom: 1rem;
+}
+
+.news-carousel-container {
+  position: relative;
+  min-height: 250px;
+}
+
 /* for gallery statement */
 .closing {
   margin-bottom:30px;
@@ -783,14 +813,14 @@ footer ul li a {
     flex-direction: column;
   }
   .intro-text {
-    order: 2;
+    order: 1;
     margin-top: 0rem;
     text-align: center;
   }
   .intro-images {
-    order: 1;
+    order: 2;
     text-align: center;
-    width: 50%;
+    width: 100%;
   }
 
   .about {
@@ -841,6 +871,40 @@ footer ul li a {
   }
   .news-text {
     padding-left: 0;
+  }
+  .news-card {
+    position: absolute;
+    width: 100%;
+    left: 0; /* ensure full width alignment */
+    padding: 0; /* remove extra padding */
+  }
+
+  /* Mobile news carousel fixes */
+  .news-carousel-container {
+    position: relative;
+    min-height: 300px; /* increased to accommodate text */
+    overflow: visible; /* allow text to show */
+  }
+
+  .news-card {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    top: 0; /* align to top */
+  }
+
+  .news-card img {
+    width: 100%;
+    max-width: 250px; /* slightly smaller image */
+    height: auto;
+    margin: 0 auto 1rem; /* center image */
+    display: block;
+  }
+
+  .news-card > div {
+    padding: 0 1rem;
+    text-align: center; /* center text on mobile */
   }
 
   html {
@@ -960,5 +1024,3 @@ footer ul li a {
 @media screen and (max-width: 520px) {
 
 }
-
-/*# sourceMappingURL=style.css.map */
