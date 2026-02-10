@@ -59,8 +59,8 @@
     height:20%;
     top:20%;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 20rem;
-            flex: 1 1 20rem;
+        -ms-flex: 1 1 calc(50% - 10px);
+            flex: 1 1 calc(50% - 10px);
             text-align:left;
   }
 
