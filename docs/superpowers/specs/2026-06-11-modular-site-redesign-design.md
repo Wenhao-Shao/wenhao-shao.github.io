@@ -140,6 +140,8 @@ Existing social links (LinkedIn, Twitter/X, UGA profile) plus a new **"Leave a m
 
 ### 3.1 Home Page (`/index.html`)
 
+This replaces the current splash/redirect page (`opening.gif` + 2.4s fade redirect to `day-version/`) — `/index.html` becomes the home page content directly, with no splash or redirect delay. A black-screen GIF intro doesn't fit the new minimalist/editorial aesthetic, and the flattened single-page-tree decision already implies `/index.html` is the real home page.
+
 **Hero**:
 - "W. Shao Laboratory" — Display
 - "Electronic and Photonic Materials Discovery" — Lead, accent color (kept from current copy)
@@ -274,3 +276,4 @@ No structural changes — both pick up the new shared partials/stylesheet automa
 - `BODY/*.html` templates retire: content moves into `data/*.json` (about/news/publications/projects), or becomes the new shared partials (`head-body.html` → `partials/head.html`).
 - Images move from `/<version>/about/...`, `/TOC/...`, etc. into `/assets/img/{people,news,gallery,projects,publications}/`.
 - Old `/day-version/...` and `/night-version/...` URLs will 404 (flattened to a single page tree, per project decision).
+- The root splash page (`opening.gif` + fade/redirect script) is retired; `/index.html` becomes the home page content directly (see §3.1).
