@@ -44,7 +44,8 @@ The `day-version/`, `night-version/`, and `BODY/` trees are replaced by a single
   projects.json
 /assets/img/
   people/, news/, gallery/, projects/, publications/
-/index.html               — home
+/index.html               — splash (kept: opening.gif + fade, redirects to /home/)
+/home/index.html          — home
 /about/index.html
 /news/index.html
 /research/index.html
@@ -118,7 +119,7 @@ Single family: **Manrope** (Google Fonts), varying weight for hierarchy — repl
 
 ```json
 [
-  {"label": "Home", "href": "/"},
+  {"label": "Home", "href": "/home/"},
   {"label": "News", "href": "/news/"},
   {"label": "About", "href": "/about/"},
   {"label": "Research", "href": "/research/"},
@@ -128,7 +129,7 @@ Single family: **Manrope** (Google Fonts), varying weight for hierarchy — repl
 ]
 ```
 
-Brand "Shao Lab" on the left, links from `nav.json` in the center/right, theme-toggle icon on the far right. Fun is omitted from this list (page remains live at `/fun/`). On narrow viewports the link list collapses into a hamburger menu (responsive-patterns work).
+Brand "Shao Lab" on the left (links to `/home/`, same as the "Home" item), links from `nav.json` in the center/right, theme-toggle icon on the far right. Fun is omitted from this list (page remains live at `/fun/`). On narrow viewports the link list collapses into a hamburger menu (responsive-patterns work).
 
 ### Footer (`partials/footer.html`)
 
@@ -138,9 +139,9 @@ Existing social links (LinkedIn, Twitter/X, UGA profile) plus a new **"Leave a m
 
 ## 3. Page Designs
 
-### 3.1 Home Page (`/index.html`)
+### 3.1 Home Page (`/home/index.html`)
 
-This replaces the current splash/redirect page (`opening.gif` + 2.4s fade redirect to `day-version/`) — `/index.html` becomes the home page content directly, with no splash or redirect delay. A black-screen GIF intro doesn't fit the new minimalist/editorial aesthetic, and the flattened single-page-tree decision already implies `/index.html` is the real home page.
+The existing root splash page (`/index.html`, `opening.gif` + 2.4s fade transition) is kept as-is, with its redirect retargeted from `day-version/` to `/home/` — the new home page. The nav's "Shao Lab" brand and "Home" link both point to `/home/`, so navigating the site never replays the splash.
 
 **Hero**:
 - "W. Shao Laboratory" — Display
@@ -276,4 +277,4 @@ No structural changes — both pick up the new shared partials/stylesheet automa
 - `BODY/*.html` templates retire: content moves into `data/*.json` (about/news/publications/projects), or becomes the new shared partials (`head-body.html` → `partials/head.html`).
 - Images move from `/<version>/about/...`, `/TOC/...`, etc. into `/assets/img/{people,news,gallery,projects,publications}/`.
 - Old `/day-version/...` and `/night-version/...` URLs will 404 (flattened to a single page tree, per project decision).
-- The root splash page (`opening.gif` + fade/redirect script) is retired; `/index.html` becomes the home page content directly (see §3.1).
+- The root splash page (`/index.html`, `opening.gif` + fade/redirect script) is kept; its redirect target is updated from `day-version/` to `/home/` (see §3.1).
