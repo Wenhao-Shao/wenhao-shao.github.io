@@ -731,3 +731,28 @@ main section {
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ==========================================================================
+   Hero (Home)
+   ========================================================================== */
+.hero {
+  text-align: center;
+  padding-top: var(--space-4);
+}
+
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero > * + * {
+  margin-top: var(--space-1);
+}
+
+.hero__subtitle {
+  color: var(--color-accent);
+}
+
+.hero__tagline {
+  margin-top: var(--space-3) !important;
+}

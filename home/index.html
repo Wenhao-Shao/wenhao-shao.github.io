@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0V2HS5NSS6');
+  </script>
+
+  <script src="/assets/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/icons/SWH_logo.png">
+
+  <meta name="description" content="W. Shao Laboratory — Electronic and Photonic Materials Discovery, Department of Chemistry, University of Georgia.">
+  <meta name="robots" content="index,follow">
+  <title>W. Shao Laboratory — Electronic and Photonic Materials Discovery</title>
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="container hero">
+      <h1 class="text-display">W. Shao Laboratory</h1>
+      <p class="text-lead hero__subtitle">Electronic and Photonic Materials Discovery</p>
+      <p class="text-muted">Department of Chemistry · University of Georgia</p>
+      <p class="text-lead hero__tagline">Where chemistry meets light.</p>
+    </section>
+
+    <section class="container home-news">
+      <div class="section-header">
+        <h2>Latest News</h2>
+        <a href="/news/" class="link-arrow">View all &rarr;</a>
+      </div>
+      <div class="home-news__grid">
+        <div class="news-featured" id="news-featured"></div>
+        <div class="news-more">
+          <h3>More News</h3>
+          <ul class="news-list" id="news-more-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-header">
+        <h2>Explore the Research</h2>
+        <a href="/research/" class="link-arrow">View All Research &rarr;</a>
+      </div>
+      <div class="gallery-mosaic" id="gallery-mosaic"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/render-news.js" defer></script>
+  <script src="/assets/js/render-gallery.js" defer></script>
+  <script src="/assets/js/partials.js" defer></script>
+</body>
+</html>
