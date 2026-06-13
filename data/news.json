@@ -1,0 +1,83 @@
+[
+  {
+    "date": "Feb 2026",
+    "title": "New Postdoc",
+    "tag": "People",
+    "image": "/assets/img/news/2602_1.jpg",
+    "link": "/about/",
+    "excerpt": "We warmly welcome postdoctoral researcher Dr. Le Wei, whose work on photonic devices and micro/nanofabrication will lead our new efforts in miniaturized chiroptics and integrated biosensing.",
+    "body": "<p>We warmly welcome postdoctoral researcher Dr. Le Wei. Dr. Wei received his Ph.D. in Electrical Engineering from Iowa State University under the supervision of <a href=\"https://www.engineering.iastate.edu/people/profile/menglu/\" target=\"_blank\"><u>Prof. Meng Lu</u></a> and <a href=\"http://www.memslab.net/\" target=\"_blank\"><u>Prof. Liang Dong</u></a>. His research focuses on photonic devices and micro/nanofabrication, with experience in semiconductor processing and optical instrumentation. Dr. Wei will lead our efforts in miniaturized chiroptics and integrated biosensing.</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Jan 2026",
+    "title": "Layered Perovskite Room-Temperature Nanolasers",
+    "tag": "Publication",
+    "image": "/assets/img/news/2601_1.png",
+    "link": "https://pubs.acs.org/doi/full/10.1021/jacs.5c14431",
+    "excerpt": "Meticulous crystallization control of phase-pure quasi-2D tin-iodide perovskite nanowires enables color-tunable, room-temperature lasing, opening the door to a new platform for nanoscale photonics.",
+    "body": "<p>Practical room-temperature (RT) operation of nanowire lasers requires efficient gain materials. Our recent <a href=\"https://pubs.acs.org/doi/full/10.1021/jacs.5c14431\" target=\"_blank\"><u>JACS</u></a>, provided an answer through meticulous crystallization control of phase-pure quasi-2D tin-iodide perovskite nanowires. These nanowires support color-tunable NIR, RT optically pumped lasing, with thresholds as low as 75.8 μJ/cm², cavity quality factors exceeding 3000, and negligible degradation over more than one million pulses. This work opens the door to using layered perovskite nanowires as a promising platform for nanoscale electronics and miniaturized photonic devices. Thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project.html?id=perovskite-nanolasers\" target=\"_blank\"><u>Miniaturized Layered Perovskite Lasers</u></a>.</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Dec 2025",
+    "title": "Microscope Installation",
+    "image": "/assets/img/news/2512_2.png",
+    "body": "<p>We’re welcoming Russ and Charles from Hunt Optics &amp; Imaging for the installation of our brand-new Olympus IX85 microscope.</p>",
+    "featured": "small"
+  },
+  {
+    "date": "Dec 2025",
+    "title": "Ionic Liquid x Perovskite Solar Cell",
+    "tag": "Publication",
+    "image": "/assets/img/news/2512_1.png",
+    "link": "https://www.nature.com/articles/s41560-025-01906-6",
+    "excerpt": "A new ionic liquid additive regulates perovskite growth and stabilizes buried interfaces, pushing power conversion efficiency to 25.9% with markedly improved long-term stability.",
+    "body": "<p>Led by Dr. Wenzhan Xu, our paper using ionic liquids to enhance the stability of perovskite solar cells has been published in <a href=\"https://www.nature.com/articles/s41560-025-01906-6\" target=\"_blank\"><u>Nature Energy</u></a>. A new ionic liquid MEM-MIM-Cl was used to regulate perovskite growth and stabilize buried interfaces. Solar cells incorporating MEM-MIM-Cl achieved a power conversion efficiency of 25.9% and retained 90% initial performance after 1,500 hrs' 1-sun illumination and 90°C thermal stress - surpassing prior benchmarks under milder ageing conditions. Many thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project.html?id=templated-perovskite-optoelectronics\" target=\"_blank\"><u>Templated Crystallization in Perovskite Optoelectronics</u></a>.</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Nov 2025",
+    "title": "The first cohort",
+    "image": "/assets/img/news/2511_2.png",
+    "body": "<p>We warmly welcome Wai Loon Chooi and Yue Wang as the first Ph.D. students in the lab! Wish you all the best in your future scientific discovery and innovation.</p>",
+    "featured": "small"
+  },
+  {
+    "date": "Nov 2025",
+    "title": "AIChE 2025",
+    "image": "/assets/img/news/2511_1.jpg",
+    "body": "<p>Another great year with Area 8E - Electronic and Photonic Materials at the 2025 AIChE Conference - fantastic to reconnect and meet new faces!</p>",
+    "featured": "small"
+  },
+  {
+    "date": "Oct 7 2025",
+    "title": "First Molecule",
+    "image": "/assets/img/news/2510_1.jpg",
+    "body": "<p>Rotation student Ichchha has successfully synthesized our first molecule in the lab. Image showing Ichchha in front of her first reaction. Congratulation!</p>"
+  },
+  {
+    "date": "Sep 24 2025",
+    "title": "Prof. Jinsang Kim's Professorship Ceremony",
+    "image": "/assets/img/news/2509_3.jpg",
+    "body": "<p>Wenhao's Ph.D. advisor, Prof. Jinsang Kim, has been named the Raoul Kopelman Collegiate Professor at the University of Michigan. Today marks his official professorship ceremony. Here are the <a href=\"https://macro.engin.umich.edu/jinsang-kim-named-raoul-kopelman-collegiate-professor-of-science-engineering/\" target=\"_blank\"><u>news</u></a>, <a href=\"https://leccap.engin.umich.edu/leccap/player/r/KWIPJv\" target=\"_blank\"><u>recording</u></a> of the ceremony, and <a href=\"https://www.flickr.com/photos/138562590@N05/albums/72177720329268804/\" target=\"_blank\"><u>photo gallery</u></a>. CONGRATS to the best mentor and the most complete person!</p><p>(p.c. Michigan MSE - Kim group @ceremony)</p>"
+  },
+  {
+    "date": "Sep 2025",
+    "title": "Miniaturized Layered Perovskite Lasers",
+    "image": "/assets/img/news/2509_1.jpg",
+    "body": "<p>Following the submission of two new papers on lead-free room temperature layered perovskite nanolasers, we invite you to read our executive summary on this breakthrough technology <a href=\"/research/project.html?id=perovskite-nanolasers\" target=\"_blank\"><u>here</u></a>.</p>"
+  },
+  {
+    "date": "July 2025",
+    "title": "Optics Lab Kicked Off",
+    "image": "/assets/img/news/2507_1.JPEG",
+    "body": "<p>We inherited a laser table thanks to the generous support of the Department of Chemistry.</p>"
+  },
+  {
+    "date": "June 2025",
+    "title": "W. Shao Laboratory was founded",
+    "image": "/assets/img/news/news_default.png",
+    "body": "<p>Wenhao moved to UGA Chemistry. The group will explore purely organic and organic–inorganic hybrid materials, with an initial emphasis on their photonic, electronic, and quantum applications.</p>"
+  }
+]
