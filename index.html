@@ -33,7 +33,7 @@
       window.onload = function() {
         // Preload the next page by creating a hidden iframe
         const preloadFrame = document.createElement('iframe');
-        preloadFrame.src = "day-version/";
+        preloadFrame.src = "/home/";
         preloadFrame.style.display = 'none';
         preloadFrame.style.position = 'absolute';
         preloadFrame.style.top = '-9999px';
@@ -42,7 +42,7 @@
         // Also preload using link prefetch for better compatibility
         const link = document.createElement('link');
         link.rel = 'prefetch';
-        link.href = "day-version/";
+        link.href = "/home/";
         document.head.appendChild(link);
         
         // Start fade transition at 2s to let GIF finish playing
@@ -52,13 +52,13 @@
           
           // Navigate after fade completes (400ms later, at 2.4s total)
           setTimeout(function() {
-            window.location.replace("day-version/");
+            window.location.replace("/home/");
           }, 400);
         }, fadeStartTime);
       };
     </script>
     <noscript>
-      <meta http-equiv="refresh" content="3; url=day-version/">
+      <meta http-equiv="refresh" content="3; url=/home/">
     </noscript>
   </head>
   <body>
