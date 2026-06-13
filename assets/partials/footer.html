@@ -1,0 +1,39 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="site-footer__credit">
+      &copy; 2026 W. Shao Laboratory, Department of Chemistry, University of Georgia.<br>
+      Website by <a href="https://www.linkedin.com/in/cali-li/" target="_blank" rel="noopener">Cali Li</a>.
+    </p>
+    <div class="site-footer__links">
+      <button type="button" class="link-arrow" id="open-message-modal">Leave a message &rarr;</button>
+    </div>
+    <div class="site-footer__icons">
+      <a href="https://www.linkedin.com/in/wenhao-shao/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com/whshao" target="_blank" rel="noopener" aria-label="Twitter/X">
+        <img src="/assets/icons/twitter.svg" alt="Twitter/X">
+      </a>
+      <a href="https://www.chem.uga.edu/directory/people/wenhao-shao" target="_blank" rel="noopener" aria-label="UGA Chemistry profile">
+        <img src="/assets/icons/UGA.svg" alt="UGA Chemistry profile">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<div id="message-modal" class="modal-overlay" style="display:none;">
+  <div class="modal-content">
+    <button type="button" class="close-modal" id="close-message-modal" aria-label="Close">&times;</button>
+    <h2>Leave a message</h2>
+    <p class="text-muted">Have a question or want to get in touch? Send a note and we'll get back to you.</p>
+    <form action="https://formspree.io/f/mnnvojry" method="POST">
+      <label for="msg-name">Name</label>
+      <input type="text" id="msg-name" name="name" required>
+      <label for="msg-email">Email</label>
+      <input type="email" id="msg-email" name="email" required>
+      <label for="msg-comment">Message</label>
+      <textarea id="msg-comment" name="comment" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
