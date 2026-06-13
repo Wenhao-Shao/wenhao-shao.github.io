@@ -656,3 +656,78 @@ main section {
     height: 220px;
   }
 }
+
+/* ==========================================================================
+   Home: Gallery Mosaic
+   ========================================================================== */
+.gallery-mosaic {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.gallery-mosaic__row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.gallery-mosaic__row--top {
+  height: 320px;
+}
+
+.gallery-mosaic__row--bottom {
+  height: 200px;
+}
+
+.gallery-mosaic__row--top .tile.t1 {
+  flex: 1.6;
+}
+
+.gallery-mosaic__row--top .tile.t2 {
+  flex: 1;
+}
+
+.gallery-mosaic__row--bottom .tile {
+  flex: 1;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(20, 24, 33, 0.82) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2);
+}
+
+.tile__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+
+.tile.t1 .tile__title {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 760px) {
+  .gallery-mosaic__row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .gallery-mosaic__row .tile {
+    flex: none;
+    aspect-ratio: 4 / 3;
+  }
+}

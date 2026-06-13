@@ -1,0 +1,27 @@
+[
+  {
+    "image": "/assets/img/gallery/Map_purple-gold.jpg",
+    "title": "Layered Perovskite Nanowires",
+    "link": "https://www.science.org/doi/10.1126/science.adl0920"
+  },
+  {
+    "image": "/assets/img/gallery/twist_1.jpg",
+    "title": "Twisted Ribbons",
+    "link": "/research/"
+  },
+  {
+    "image": "/assets/img/gallery/helical_1.jpg",
+    "title": "Helical Ribbons",
+    "link": "/research/"
+  },
+  {
+    "image": "/assets/img/gallery/bear.jpg",
+    "title": "Halide Perovskite Crystals",
+    "link": "/research/"
+  },
+  {
+    "image": "/assets/img/gallery/chocolate.jpg",
+    "title": "Chocolate Crystals",
+    "link": "/research/"
+  }
+]
