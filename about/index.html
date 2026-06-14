@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0V2HS5NSS6');
+  </script>
+
+  <script src="/assets/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/icons/SWH_logo.png">
+
+  <meta name="description" content="About — W. Shao Laboratory. Meet our principal investigator, group members, and lab mascots.">
+  <meta name="robots" content="index,follow">
+  <title>About — W. Shao Laboratory</title>
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="container">
+      <h1 class="section-heading">About</h1>
+      <div id="about-pi"></div>
+
+      <h2 class="section-heading section-heading--spaced">Group Members</h2>
+      <div id="people-members" class="people-grid"></div>
+
+      <h2 class="section-heading section-heading--spaced">Mascots</h2>
+      <div id="people-mascots" class="people-grid"></div>
+    </section>
+  </main>
+
+  <div id="person-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <button type="button" class="close-modal" id="close-person-modal" aria-label="Close">&times;</button>
+      <div id="person-modal-body"></div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/render-people.js" defer></script>
+  <script src="/assets/js/partials.js" defer></script>
+</body>
+</html>
