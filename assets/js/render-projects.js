@@ -34,6 +34,7 @@
     if (!project) {
       titleEl.textContent = 'Project Not Found';
       bodyEl.innerHTML = '<p>Sorry, we could not find that project. <a href="/research/">Return to Research &rarr;</a></p>';
+      document.title = 'Project Not Found — W. Shao Laboratory';
       return;
     }
 
