@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0V2HS5NSS6');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit Conversion Widget - Shao Lab</title>
-    <link rel="stylesheet" href="../../day-version/styles/style.css" />
-    <link rel="icon" href="../../day-version/icons/SWH_logo.png" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8E59MSLP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0V2HS5NSS6');
+  </script>
+
+  <script src="/assets/js/theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/icons/SWH_logo.png">
+
+  <meta name="description" content="Unit Conversion Widget — W. Shao Laboratory">
+  <meta name="robots" content="index,follow">
+  <title>Unit Conversion Widget — W. Shao Laboratory</title>
     
     <style>
         .widget-container {
             max-width: 1400px;
-            margin: 120px auto 40px;
+            margin: var(--space-4) auto;
             padding: 40px 20px;
         }
 
@@ -131,37 +141,13 @@
                 font-size: 1em;
                 padding: 14px;
             }
-
-            .widget-container {
-                margin-top: 80px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="../../day-version/index.html">
-                    <img src="../../day-version/icons/SWH_logo.png" alt="logo" width="80px" height="70px"/>
-                </a>
-            </div>
-            <ul>
-                <li><a class="nonactive" href="../../day-version/index.html">Home</a></li>
-                <li><a class="nonactive" href="../../day-version/news/news.html">News</a></li>
-                <li><a class="nonactive" href="../../day-version/about/about.html">About</a></li>
-                <li><a class="nonactive" href="../../day-version/research/research.html">Research</a></li>
-                <li><a class="nonactive" href="../../day-version/facility/facility.html">Facility</a></li>
-                <li><a class="nonactive" href="../../day-version/publications/publications.html">Publications</a></li>
-                <li><a class="active" href="../../day-version/fun/fun.html">Fun</a></li>
-                <a class="switch" href="../../night-version/fun/fun.html">
-                    <img src="../../day-version/icons/day_night.png" alt="switch" width="20px" height="20px"/>
-                </a>
-            </ul>
-        </nav>
-    </header>
+    <div id="site-nav"></div>
 
+    <main>
     <!-- Widget Content -->
     <div class="widget-container">
         <div class="widget-content">
@@ -250,33 +236,9 @@
             </div>
         </div>
     </div>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <h4>
-            <a href="https://www.linkedin.com/in/cali-li/"><u>Website Developed by Cali Li</u></a> <br>
-            wenjingli199707 at gmail dot com <br>
-            &copy;Copyright &copy;2024 All rights reserved
-        </h4>
-
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/wenhao-shao/" target="_blank">
-                    <img src="../../day-version/icons/linkedin.svg" alt="linkedin-social" height="40px"/>
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/whshao" target="_blank">
-                    <img src="../../day-version/icons/twitter.svg" alt="twitter-social" height="40px"/>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.chem.uga.edu/directory/people/wenhao-shao" target="_blank">
-                    <img src="../../day-version/icons/UGA.svg" alt="UGA-profile" height="40px"/>
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div id="site-footer"></div>
 
     <script>
         // Energy conversion factors (all relative to Hartree)
@@ -389,5 +351,7 @@
             });
         }
     </script>
+
+    <script src="/assets/js/partials.js" defer></script>
 </body>
 </html>
