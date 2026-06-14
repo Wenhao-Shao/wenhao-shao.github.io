@@ -58,15 +58,17 @@
       .then(function (html) {
         mount.outerHTML = html;
 
-        var openBtn = document.getElementById('open-message-modal');
+        var openBtns = document.querySelectorAll('.js-open-message-modal');
         var closeBtn = document.getElementById('close-message-modal');
         var modal = document.getElementById('message-modal');
-        if (!openBtn || !closeBtn || !modal) return;
+        if (!closeBtn || !modal) return;
 
-        openBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          modal.style.display = 'flex';
-        });
+        for (var i = 0; i < openBtns.length; i++) {
+          openBtns[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+          });
+        }
         closeBtn.addEventListener('click', function () {
           modal.style.display = 'none';
         });
