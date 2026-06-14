@@ -1025,3 +1025,71 @@ main section {
 [data-theme="dark"] .mentee {
   color: #5fd9b9;
 }
+
+/* ==========================================================================
+   Research: Project Grid & Detail
+   ========================================================================== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.project-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.project-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card__body {
+  padding: var(--space-3);
+}
+
+.project-card__title {
+  margin-top: var(--space-1);
+}
+
+.project-card__summary {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+}
+
+.project-fig {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.project-body > * {
+  margin-top: var(--space-3);
+}
+
+.project-body > *:first-child {
+  margin-top: 0;
+}
+
+.project-body > .project-fig + p {
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 760px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
