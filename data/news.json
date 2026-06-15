@@ -16,7 +16,7 @@
     "image": "/assets/img/news/2601_1.png",
     "link": "https://pubs.acs.org/doi/full/10.1021/jacs.5c14431",
     "excerpt": "Meticulous crystallization control of phase-pure quasi-2D tin-iodide perovskite nanowires enables color-tunable, room-temperature lasing, opening the door to a new platform for nanoscale photonics.",
-    "body": "<p>Practical room-temperature (RT) operation of nanowire lasers requires efficient gain materials. Our recent <a href=\"https://pubs.acs.org/doi/full/10.1021/jacs.5c14431\" target=\"_blank\"><u>JACS</u></a>, provided an answer through meticulous crystallization control of phase-pure quasi-2D tin-iodide perovskite nanowires. These nanowires support color-tunable NIR, RT optically pumped lasing, with thresholds as low as 75.8 μJ/cm², cavity quality factors exceeding 3000, and negligible degradation over more than one million pulses. This work opens the door to using layered perovskite nanowires as a promising platform for nanoscale electronics and miniaturized photonic devices. Thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project.html?id=perovskite-nanolasers\" target=\"_blank\"><u>Miniaturized Layered Perovskite Lasers</u></a>.</p>",
+    "body": "<p>Practical room-temperature (RT) operation of nanowire lasers requires efficient gain materials. Our recent <a href=\"https://pubs.acs.org/doi/full/10.1021/jacs.5c14431\" target=\"_blank\"><u>JACS</u></a>, provided an answer through meticulous crystallization control of phase-pure quasi-2D tin-iodide perovskite nanowires. These nanowires support color-tunable NIR, RT optically pumped lasing, with thresholds as low as 75.8 μJ/cm², cavity quality factors exceeding 3000, and negligible degradation over more than one million pulses. This work opens the door to using layered perovskite nanowires as a promising platform for nanoscale electronics and miniaturized photonic devices. Thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project#perovskite-nanolasers\" target=\"_blank\"><u>Miniaturized Layered Perovskite Lasers</u></a>.</p>",
     "featured": "large"
   },
   {
@@ -33,7 +33,7 @@
     "image": "/assets/img/news/2512_1.png",
     "link": "https://www.nature.com/articles/s41560-025-01906-6",
     "excerpt": "A new ionic liquid additive regulates perovskite growth and stabilizes buried interfaces, pushing power conversion efficiency to 25.9% with markedly improved long-term stability.",
-    "body": "<p>Led by Dr. Wenzhan Xu, our paper using ionic liquids to enhance the stability of perovskite solar cells has been published in <a href=\"https://www.nature.com/articles/s41560-025-01906-6\" target=\"_blank\"><u>Nature Energy</u></a>. A new ionic liquid MEM-MIM-Cl was used to regulate perovskite growth and stabilize buried interfaces. Solar cells incorporating MEM-MIM-Cl achieved a power conversion efficiency of 25.9% and retained 90% initial performance after 1,500 hrs' 1-sun illumination and 90°C thermal stress - surpassing prior benchmarks under milder ageing conditions. Many thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project.html?id=templated-perovskite-optoelectronics\" target=\"_blank\"><u>Templated Crystallization in Perovskite Optoelectronics</u></a>.</p>",
+    "body": "<p>Led by Dr. Wenzhan Xu, our paper using ionic liquids to enhance the stability of perovskite solar cells has been published in <a href=\"https://www.nature.com/articles/s41560-025-01906-6\" target=\"_blank\"><u>Nature Energy</u></a>. A new ionic liquid MEM-MIM-Cl was used to regulate perovskite growth and stabilize buried interfaces. Solar cells incorporating MEM-MIM-Cl achieved a power conversion efficiency of 25.9% and retained 90% initial performance after 1,500 hrs' 1-sun illumination and 90°C thermal stress - surpassing prior benchmarks under milder ageing conditions. Many thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project#templated-perovskite-optoelectronics\" target=\"_blank\"><u>Templated Crystallization in Perovskite Optoelectronics</u></a>.</p>",
     "featured": "large"
   },
   {
@@ -66,7 +66,7 @@
     "date": "Sep 2025",
     "title": "Miniaturized Layered Perovskite Lasers",
     "image": "/assets/img/news/2509_1.jpg",
-    "body": "<p>Following the submission of two new papers on lead-free room temperature layered perovskite nanolasers, we invite you to read our executive summary on this breakthrough technology <a href=\"/research/project.html?id=perovskite-nanolasers\" target=\"_blank\"><u>here</u></a>.</p>"
+    "body": "<p>Following the submission of two new papers on lead-free room temperature layered perovskite nanolasers, we invite you to read our executive summary on this breakthrough technology <a href=\"/research/project#perovskite-nanolasers\" target=\"_blank\"><u>here</u></a>.</p>"
   },
   {
     "date": "July 2025",

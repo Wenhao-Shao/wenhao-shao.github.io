@@ -226,10 +226,19 @@ main section {
 }
 
 .site-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.125rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   white-space: nowrap;
+}
+
+.site-nav__logo {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
 }
 
 .site-nav__links {
@@ -474,6 +483,26 @@ main section {
 }
 
 /* ==========================================================================
+   Home: Intro Layout
+   ========================================================================== */
+.home-intro {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .home-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .home-intro__news .news-more {
+    display: none;
+  }
+}
+
+/* ==========================================================================
    Home: Latest News
    ========================================================================== */
 .home-news__grid {
@@ -485,7 +514,7 @@ main section {
 
 .news-featured {
   position: relative;
-  min-height: 420px;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
   background: var(--color-surface);
@@ -495,8 +524,6 @@ main section {
 .news-card {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s ease;
@@ -509,8 +536,8 @@ main section {
 }
 
 .news-card__media {
-  position: relative;
-  height: 220px;
+  position: absolute;
+  inset: 0;
 }
 
 .news-card__media img {
@@ -521,10 +548,11 @@ main section {
 
 .news-card__dots {
   position: absolute;
-  bottom: 0.75rem;
+  top: var(--space-2);
   left: var(--space-2);
   display: flex;
   gap: 0.4rem;
+  z-index: 2;
 }
 
 .news-card__dot {
@@ -542,24 +570,30 @@ main section {
 }
 
 .news-card__body {
-  flex: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: var(--space-3);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  background: linear-gradient(to bottom, transparent, rgba(20, 24, 33, 0.85) 70%);
+  color: #ffffff;
 }
 
-.news-card__tag {
-  color: var(--color-accent);
-}
-
+.news-card__tag,
 .news-card__title {
-  font-size: 1.25rem;
+  color: #ffffff;
 }
 
 .news-card__excerpt {
   margin: 0;
-  flex: 1;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.news-card__body .link-arrow {
+  color: #ffffff;
 }
 
 .news-more h3 {
@@ -599,10 +633,6 @@ main section {
   .home-news__grid {
     grid-template-columns: 1fr;
   }
-
-  .news-featured {
-    min-height: 380px;
-  }
 }
 
 /* ==========================================================================
@@ -629,7 +659,7 @@ main section {
 
 .news-feed__media img {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -650,10 +680,6 @@ main section {
 @media (max-width: 700px) {
   .news-feed__item {
     grid-template-columns: 1fr;
-  }
-
-  .news-feed__media img {
-    height: 220px;
   }
 }
 
@@ -694,7 +720,6 @@ main section {
 .tile {
   position: relative;
   display: block;
-  border-radius: 12px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -761,11 +786,70 @@ main section {
    About: Person Cards
    ========================================================================== */
 .section-heading {
+  margin-top: var(--space-3);
   margin-bottom: var(--space-3);
 }
 
 .section-heading--spaced {
   margin-top: var(--space-5);
+}
+
+/* ==========================================================================
+   About: PI Bio
+   ========================================================================== */
+.about-pi {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+}
+
+.about-pi__photo {
+  flex: 0 0 280px;
+}
+
+.about-pi__photo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-pi__text {
+  flex: 1;
+}
+
+.about-pi__text h2 {
+  margin-bottom: 0.25rem;
+}
+
+.about-pi__blurb {
+  margin-top: var(--space-2);
+  color: var(--color-accent);
+}
+
+.about-pi__bio p {
+  margin-top: var(--space-2);
+}
+
+.about-pi__email {
+  margin-top: var(--space-2);
+}
+
+.about-pi__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 760px) {
+  .about-pi {
+    flex-direction: column;
+  }
+
+  .about-pi__photo {
+    flex: none;
+    max-width: 280px;
+  }
 }
 
 .people-grid {
@@ -808,40 +892,9 @@ main section {
   margin-top: 0.25rem;
 }
 
-.person-card--featured {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-3);
-  margin-bottom: var(--space-5);
-}
-
-.person-card--featured .person-card__photo {
-  border-radius: 8px;
-}
-
-.person-card--featured .person-card__body {
-  padding: 0;
-}
-
-.person-card--featured .person-card__blurb {
-  margin-top: var(--space-2);
-}
-
 @media (max-width: 760px) {
   .people-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .person-card--featured {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .person-card--featured .person-card__photo {
-    max-width: 220px;
-    margin: 0 auto;
   }
 }
 
@@ -1024,6 +1077,38 @@ main section {
 
 [data-theme="dark"] .mentee {
   color: #5fd9b9;
+}
+
+/* ==========================================================================
+   Research: Intro
+   ========================================================================== */
+.research-intro__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-accent);
+}
+
+.research-intro__layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-4);
+}
+
+.research-intro__layout p {
+  max-width: none;
+}
+
+.research-intro__img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .research-intro__layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================

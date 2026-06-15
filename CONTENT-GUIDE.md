@@ -108,7 +108,7 @@ Each news item looks like this:
 | `image` | Yes | Path to a photo (see [Adding Photos](#9-adding-photos)). |
 | `body` | Yes | The full story, shown on the News page. Use `<p>` paragraphs. |
 | `tag` | No | A short label like `"People"`, `"Publication"`, or `"Award"`. Only shown on featured home-page cards. |
-| `link` | Only if `featured: "large"` | Where "Read more" goes — can be an external URL or an internal link like `/research/project.html?id=some-project`. |
+| `link` | Only if `featured: "large"` | Where "Read more" goes — can be an external URL or an internal link like `/research/project#some-project`. |
 | `excerpt` | Only if `featured: "large"` | A one-sentence teaser shown on the home page. |
 | `featured` | No | Controls whether this appears on the **home page** (see below). |
 
@@ -176,6 +176,7 @@ Each project looks like this:
 ```json
 {
   "slug": "your-project-slug",
+  "status": "current",
   "title": "Project Title",
   "summary": "A one- or two-sentence summary shown on the Research page card.",
   "image": "/assets/img/projects/your-project-slug.jpg",
@@ -187,7 +188,8 @@ Each project looks like this:
 
 | Field | What it is |
 |---|---|
-| `slug` | A unique short ID, lowercase with hyphens, no spaces. This becomes part of the project's web address (`/research/project.html?id=your-project-slug`). **Pick it carefully and don't change it later** — other pages may link to it. |
+| `slug` | A unique short ID, lowercase with hyphens, no spaces. This becomes part of the project's web address (`/research/project#your-project-slug`). **Pick it carefully and don't change it later** — other pages may link to it. |
+| `status` | `"current"` or `"previous"` — controls whether the project appears under "Current Projects" or "Previous Projects" on the Research page. |
 | `title` | The project's full title. |
 | `summary` | Short teaser shown on the Research page grid. |
 | `image` | The thumbnail photo for the grid card. |
@@ -199,7 +201,7 @@ Each project looks like this:
 <img class=\"project-fig\" src=\"/assets/img/projects/figure-2.jpg\" alt=\"Description for screen readers\">
 ```
 
-**Linking a news post to a project:** in `data/news.json`, set that post's `"link"` to `/research/project.html?id=your-project-slug`.
+**Linking a news post to a project:** in `data/news.json`, set that post's `"link"` to `/research/project#your-project-slug`.
 
 **To add a new project:** copy an existing entry, paste it where you want it to appear in the Research grid, give it a new `slug`, and fill in the details. Add its image(s) to `assets/img/projects/`.
 

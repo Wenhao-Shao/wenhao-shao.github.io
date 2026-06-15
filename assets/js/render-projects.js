@@ -3,7 +3,7 @@
 
   function projectCardHTML(project) {
     return (
-      '<a class="project-card" href="/research/project.html?id=' + project.slug + '">' +
+      '<a class="project-card" href="/research/project#' + project.slug + '">' +
         '<img class="project-card__img" src="' + project.image + '" alt="' + project.title + '">' +
         '<div class="project-card__body">' +
           '<h3 class="project-card__title">' + project.title + '</h3>' +
@@ -13,16 +13,15 @@
     );
   }
 
-  function renderGrid(grid, projects) {
-    var html = '';
-    for (var i = 0; i < projects.length; i++) {
-      html += projectCardHTML(projects[i]);
-    }
-    grid.innerHTML = html;
+  function renderGrid(currentGrid, previousGrid, projects) {
+    var current = projects.filter(function (p) { return p.status === 'current'; });
+    var previous = projects.filter(function (p) { return p.status === 'previous'; });
+    if (currentGrid) currentGrid.innerHTML = current.map(projectCardHTML).join('');
+    if (previousGrid) previousGrid.innerHTML = previous.map(projectCardHTML).join('');
   }
 
   function renderDetail(titleEl, bodyEl, projects) {
-    var id = new URLSearchParams(window.location.search).get('id');
+    var id = window.location.hash.slice(1);
     var project = null;
     for (var i = 0; i < projects.length; i++) {
       if (projects[i].slug === id) {
@@ -43,16 +42,17 @@
     document.title = project.title + ' — W. Shao Laboratory';
   }
 
-  var grid = document.getElementById('project-grid');
+  var gridCurrent = document.getElementById('project-grid-current');
+  var gridPrevious = document.getElementById('project-grid-previous');
   var titleEl = document.getElementById('project-title');
   var bodyEl = document.getElementById('project-body');
 
-  if (!grid && !(titleEl && bodyEl)) return;
+  if (!gridCurrent && !gridPrevious && !(titleEl && bodyEl)) return;
 
   fetch('/data/projects.json')
     .then(function (res) { return res.json(); })
     .then(function (projects) {
-      if (grid) renderGrid(grid, projects);
+      if (gridCurrent || gridPrevious) renderGrid(gridCurrent, gridPrevious, projects);
       if (titleEl && bodyEl) renderDetail(titleEl, bodyEl, projects);
     })
     .catch(function (err) {

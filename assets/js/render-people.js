@@ -1,17 +1,11 @@
 (function () {
-  function personCardHTML(person, featured) {
-    var cardClass = featured ? 'person-card person-card--featured' : 'person-card';
-    var blurb = (featured && person.blurb)
-      ? '<p class="person-card__blurb text-muted">' + person.blurb + '</p>'
-      : '';
-
+  function personCardHTML(person) {
     return '' +
-      '<button type="button" class="' + cardClass + '" data-slug="' + person.slug + '">' +
+      '<button type="button" class="person-card" data-slug="' + person.slug + '">' +
         '<img class="person-card__photo" src="' + person.photo + '" alt="' + person.name + '">' +
         '<div class="person-card__body">' +
           '<h3>' + person.name + '</h3>' +
           '<p class="person-card__title text-muted">' + person.title + '</p>' +
-          blurb +
         '</div>' +
       '</button>';
   }
@@ -20,18 +14,6 @@
     var email = person.email
       ? '<p class="person-modal__email"><strong>Email:</strong> ' + person.email + '</p>'
       : '';
-
-    var actions = '';
-    if (person.section === 'pi') {
-      var cvBtn = person.cv
-        ? '<a class="btn" href="' + person.cv + '" download>Download CV</a>'
-        : '';
-      actions = '' +
-        '<div class="person-modal__actions">' +
-          '<button type="button" class="btn btn-primary" id="person-modal-message">Leave a message</button>' +
-          cvBtn +
-        '</div>';
-    }
 
     return '' +
       '<div class="person-modal__header">' +
@@ -42,8 +24,30 @@
         '</div>' +
       '</div>' +
       '<div class="person-modal__bio">' + person.bio + '</div>' +
-      email +
-      actions;
+      email;
+  }
+
+  function piBioHTML(pi) {
+    var blurb = pi.blurb ? '<p class="text-lead about-pi__blurb">' + pi.blurb + '</p>' : '';
+    var cvBtn = pi.cv
+      ? '<a class="btn" href="' + pi.cv + '" download>Download CV</a>'
+      : '';
+
+    return '' +
+      '<div class="about-pi__photo">' +
+        '<img src="' + pi.photo + '" alt="' + pi.name + '">' +
+      '</div>' +
+      '<div class="about-pi__text">' +
+        '<h2>' + pi.name + '</h2>' +
+        '<p class="text-muted">' + pi.title + '</p>' +
+        blurb +
+        '<div class="about-pi__bio">' + pi.bio + '</div>' +
+        '<p class="about-pi__email"><strong>Email:</strong> ' + pi.email + '</p>' +
+        '<div class="about-pi__actions">' +
+          '<button type="button" class="btn btn-primary" id="pi-message-btn">Leave a message</button>' +
+          cvBtn +
+        '</div>' +
+      '</div>';
   }
 
   function openModal(person) {
@@ -53,15 +57,6 @@
 
     body.innerHTML = personModalHTML(person);
     modal.style.display = 'flex';
-
-    var msgBtn = document.getElementById('person-modal-message');
-    if (msgBtn) {
-      msgBtn.addEventListener('click', function () {
-        modal.style.display = 'none';
-        var messageModal = document.getElementById('message-modal');
-        if (messageModal) messageModal.style.display = 'flex';
-      });
-    }
   }
 
   function wireCards(mount, people) {
@@ -100,15 +95,21 @@
       var mascotList = people.filter(function (p) { return p.section === 'mascot'; });
 
       if (pi && pis.length > 0) {
-        pi.innerHTML = personCardHTML(pis[0], true);
-        wireCards(pi, people);
+        pi.innerHTML = piBioHTML(pis[0]);
+        var msgBtn = document.getElementById('pi-message-btn');
+        if (msgBtn) {
+          msgBtn.addEventListener('click', function () {
+            var messageModal = document.getElementById('message-modal');
+            if (messageModal) messageModal.style.display = 'flex';
+          });
+        }
       }
       if (members) {
-        members.innerHTML = memberList.map(function (p) { return personCardHTML(p, false); }).join('');
+        members.innerHTML = memberList.map(personCardHTML).join('');
         wireCards(members, people);
       }
       if (mascots) {
-        mascots.innerHTML = mascotList.map(function (p) { return personCardHTML(p, false); }).join('');
+        mascots.innerHTML = mascotList.map(personCardHTML).join('');
         wireCards(mascots, people);
       }
     })

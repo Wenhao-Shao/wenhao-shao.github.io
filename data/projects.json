@@ -1,6 +1,7 @@
 [
   {
     "slug": "topological-perovskite-nanowires",
+    "status": "current",
     "title": "Topologically Modified Hybrid Layered Materials",
     "summary": "Carboxylic-acid-modified 2D perovskites self-assemble into 1D nanowires, establishing a new class of topologically-modified hybrid materials.",
     "image": "/assets/img/projects/topological-nanowires.jpg",
@@ -8,6 +9,7 @@
   },
   {
     "slug": "perovskite-nanolasers",
+    "status": "previous",
     "title": "Deterministic Synthesis of Layered Perovskite Room-Temperature Nanolasers",
     "summary": "Hydrogen-bonded organic frameworks template phase-pure quasi-2D tin halide perovskite nanowires, enabling low-threshold, ambient-stable room-temperature nanolasers.",
     "image": "/assets/img/projects/perovskite-nanolasers.jpg",
@@ -15,6 +17,7 @@
   },
   {
     "slug": "templated-perovskite-optoelectronics",
+    "status": "previous",
     "title": "Templated Crystallization in Metal-Halide Perovskite Optoelectronics",
     "summary": "Molecular and substrate templates control perovskite crystallization and morphology, suppressing defects in solar cells and enabling discrete-grain microlens architectures for highly efficient LEDs.",
     "image": "/assets/img/projects/templated-mhp-fig1.webp",
@@ -22,6 +25,7 @@
   },
   {
     "slug": "organic-phosphors",
+    "status": "previous",
     "title": "First Principles Design of Organic Phosphors",
     "summary": "A heavy-atom-oriented design strategy (HAAM) enables metal-free organic molecules to achieve fast, efficient, near-unity room-temperature phosphorescence for OLEDs, sensors, and data encryption.",
     "image": "/assets/img/projects/organic-phosphors.jpg",
