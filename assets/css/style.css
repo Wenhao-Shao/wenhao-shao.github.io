@@ -154,6 +154,10 @@ p {
   padding: 0 var(--space-3);
 }
 
+.container--wide {
+  max-width: none;
+}
+
 main section {
   padding: var(--space-5) 0;
 }
@@ -290,6 +294,13 @@ main section {
 [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
+/* Swap an image per color theme: give the light-mode version
+   class="theme-img theme-img--light" and the dark-mode version
+   class="theme-img theme-img--dark". */
+.theme-img--dark { display: none; }
+[data-theme="dark"] .theme-img--light { display: none; }
+[data-theme="dark"] .theme-img--dark { display: block; }
+
 .nav-toggle {
   display: none;
   border: none;
@@ -301,33 +312,15 @@ main section {
 }
 
 @media (max-width: 860px) {
-  .nav-toggle {
-    display: inline-flex;
+  .theme-toggle {
     order: 2;
   }
 
-  .theme-toggle {
-    order: 3;
-  }
-
   .site-nav__links {
-    order: 4;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-2);
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    padding: var(--space-2) var(--space-3) var(--space-3);
-    margin: 0;
-    display: none;
-  }
-
-  .site-nav__links.open {
-    display: flex;
+    order: 3;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
   }
 }
 
@@ -515,7 +508,6 @@ main section {
 .news-featured {
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: 12px;
   overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -612,7 +604,6 @@ main section {
   gap: 0.25rem;
   padding: var(--space-2);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
@@ -661,7 +652,6 @@ main section {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .news-feed__date {
@@ -761,13 +751,8 @@ main section {
    Hero (Home)
    ========================================================================== */
 .hero {
-  text-align: center;
+  text-align: left;
   padding-top: var(--space-4);
-}
-
-.hero p {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero > * + * {

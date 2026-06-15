@@ -386,3 +386,28 @@ Check that:
 **I want to change the menu order, page layout, colors, or fonts.**
 That goes beyond this guide — those live in the design files (`assets/css/style.css` and the page templates). Ask a developer for help with those changes.
 
+---
+
+## 12. Using Different Images for Light Mode vs. Dark Mode
+
+If you have a figure that looks better on a white background in light mode and a dark background in dark mode (e.g. a diagram with a transparent background), you can supply two versions and the site will automatically show the right one.
+
+**How to do it:**
+
+Place both images in the appropriate folder (e.g. `assets/img/research/`), then in the HTML file add **two** `<img>` tags side by side, one with class `theme-img theme-img--light` and one with `theme-img theme-img--dark`:
+
+```html
+<img class="theme-img theme-img--light"
+     src="/assets/img/research/diagram-light.png"
+     alt="Diagram">
+<img class="theme-img theme-img--dark"
+     src="/assets/img/research/diagram-dark.png"
+     alt="Diagram">
+```
+
+- The `--light` image is shown in light mode and hidden in dark mode.
+- The `--dark` image is shown in dark mode and hidden in light mode.
+- Both `<img>` tags must sit next to each other and have the same `alt` text.
+
+This only applies to images embedded directly in page HTML files (e.g. `research/index.html`). Images referenced in `data/*.json` files are single-path only — no light/dark swap there.
+
