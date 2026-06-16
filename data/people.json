@@ -12,7 +12,7 @@
   },
   {
     "slug": "le-wei",
-    "name": "Le Wei",
+    "name": "Le, Wei",
     "title": "Postdoctoral Researcher",
     "photo": "/assets/img/people/le-wei.jpg",
     "section": "member",
@@ -21,8 +21,8 @@
   },
   {
     "slug": "chooi-wai-loon",
-    "name": "Chooi Wai Loon",
-    "title": "Ph.D. Student, Physics &amp; Astronomy",
+    "name": "Chooi, Wai Loon",
+    "title": "Ph.D. Student, Physics",
     "photo": "/assets/img/people/chooi-wai-loon.jpg",
     "section": "member",
     "bio": "<p>Wai Loon was born in Kedah but raised mostly in Malacca, Malaysia. He earned his B.S. in Industrial Physics from Universiti Malaysia Sabah in 2022, completing a thesis on simulation-based studies of organic molecules for organic light-emitting diode applications. He is currently a Ph.D. student in the Department of Physics and Astronomy and joined the lab in Fall 2025.</p>",
@@ -30,7 +30,7 @@
   },
   {
     "slug": "wang-yue",
-    "name": "Wang Yue",
+    "name": "Wang, Yue",
     "title": "Ph.D. Student, Chemistry",
     "photo": "/assets/img/people/wang-yue.png",
     "section": "member",
@@ -39,10 +39,10 @@
   },
   {
     "slug": "ichchha-badgujjar",
-    "name": "Ichchha Badgujjar",
+    "name": "Ichchha, Badgujjar",
     "title": "Ph.D. Student, Chemistry (Rotation)",
     "photo": "/assets/img/people/ichchha-badgujjar.jpg",
-    "section": "member",
+    "section": "alumni",
     "bio": "<p>Ichchha is a second-year Ph.D. student in the Department of Chemistry. She joined the lab in Fall 2025 as a rotating student.</p>",
     "email": "Ichchha.Badgujjar at uga dot edu"
   },

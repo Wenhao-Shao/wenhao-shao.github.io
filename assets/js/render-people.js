@@ -73,6 +73,7 @@
   var pi = document.getElementById('about-pi');
   var members = document.getElementById('people-members');
   var mascots = document.getElementById('people-mascots');
+  var alumni = document.getElementById('people-alumni');
   var modal = document.getElementById('person-modal');
   var closeBtn = document.getElementById('close-person-modal');
 
@@ -93,6 +94,7 @@
       var pis = people.filter(function (p) { return p.section === 'pi'; });
       var memberList = people.filter(function (p) { return p.section === 'member'; });
       var mascotList = people.filter(function (p) { return p.section === 'mascot'; });
+      var alumniList = people.filter(function(p) { return p.section === 'alumni'; });
 
       if (pi && pis.length > 0) {
         pi.innerHTML = piBioHTML(pis[0]);
@@ -111,6 +113,10 @@
       if (mascots) {
         mascots.innerHTML = mascotList.map(personCardHTML).join('');
         wireCards(mascots, people);
+      }
+      if (alumni) {
+        alumni.innerHTML = alumniList.map(personCardHTML).join('');
+        wireCards(alumni, people);
       }
     })
     .catch(function (err) {
