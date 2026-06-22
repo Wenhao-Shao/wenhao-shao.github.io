@@ -1,12 +1,32 @@
 [
   {
+    "date": "June 2026",
+    "title": "New Undergraduate Student",
+    "tag": "People",
+    "image": "/assets/img/people/owen-sexton.jpg",
+    "link": "/about/",
+    "excerpt": "We are excited to welcome our new undergraduate student, Owen Sexton.",
+    "body": "<p>We are excited to welcome Owen Sexton, who will start working with us from Fall 2026. Owen is an undergraduate chemistry major from Georgia and has a strong interest in organic chemistry.</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Feb 2026",
+    "title": "Air-stable Layered Perovskite Nanolasers",
+    "tag": "Publication",
+    "image": "/assets/img/publications/2026-acs-photonics.jpg",
+    "link": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02285",
+    "excerpt": "Front cover: air stable microlasers was achieve with an \"air-unstable\" layered perovskite.",
+    "body": "<p>Our work with Dr. Sangyeon (Fred) Cho on layered perovskite microlasers was featured on the front cover of <a href=\"https://pubs.acs.org/doi/10.1021/acsphotonics.5c02285\" target=\"_blank\"><u>ACS Photonics</u></a>. We report stable room-temperature lasing from quasi-2D tin iodide perovskite microcrystals in ambient air. The cover illustrates plasmonic microlasing from microscale crystals on the gold substrate.</p><p>Read More: <a href=\"/research/project#perovskite-nanolasers\" target=\"_blank\"><u>Miniaturized Layered Perovskite Lasers</u></a>.</p>",
+    "featured": "large"
+  },
+  {
     "date": "Feb 2026",
     "title": "First Ph.D. Candidate",
     "tag": "People",
     "image": "/assets/img/people/chooi-wai-loon.jpg",
     "link": "/about/",
     "excerpt": "Wai Loon passed his qualifying exam. Congrats!",
-    "body": "<p>We warmly welcome our first Ph.D. candidate, Sarah Johnson. Sarah joined our lab in fall 2025 and will be working on developing novel photonic devices for biomedical applications.</p>",
+    "body": "<p>Wai Loon passed his qualifying exam at the Department of Physics and Astronomy. Congratulations!</p>",
     "featured": "large"
   },
   {
@@ -23,11 +43,11 @@
     "date": "Jan 2026",
     "title": "Layered Perovskite Room-Temperature Nanolasers",
     "tag": "Publication",
-    "image": "/assets/img/news/2601_1.png",
+    "image": "/assets/img/publications/2026-jacs.png",
     "link": "https://pubs.acs.org/doi/full/10.1021/jacs.5c14431",
     "excerpt": "HOF x 2D perovskite = room-temperature nanolaser.",
     "body": "<p>Practical room-temperature (RT) operation of nanowire lasers requires efficient gain materials. Our recent <a href=\"https://pubs.acs.org/doi/full/10.1021/jacs.5c14431\" target=\"_blank\"><u>JACS</u></a>, provided an answer through meticulous crystallization control of phase-pure quasi-2D tin-iodide perovskite nanowires. These nanowires support color-tunable NIR, RT optically pumped lasing, with thresholds as low as 75.8 μJ/cm², cavity quality factors exceeding 3000, and negligible degradation over more than one million pulses. This work opens the door to using layered perovskite nanowires as a promising platform for nanoscale electronics and miniaturized photonic devices. Thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project#perovskite-nanolasers\" target=\"_blank\"><u>Miniaturized Layered Perovskite Lasers</u></a>.</p>",
-    "featured": "large"
+    "featured": "small"
   },
   {
     "date": "Dec 2025",
@@ -39,7 +59,7 @@
     "date": "Dec 2025",
     "title": "Ionic Liquid x Perovskite Solar Cell",
     "tag": "Publication",
-    "image": "/assets/img/news/2512_1.png",
+    "image": "/assets/img/publications/2025-nat-energy.png",
     "link": "https://www.nature.com/articles/s41560-025-01906-6",
     "excerpt": "New report in Nature Energy with solar cells retain 90% performance at 90°C.",
     "body": "<p>Led by Dr. Wenzhan Xu, our paper using ionic liquids to enhance the stability of perovskite solar cells has been published in <a href=\"https://www.nature.com/articles/s41560-025-01906-6\" target=\"_blank\"><u>Nature Energy</u></a>. A new ionic liquid MEM-MIM-Cl was used to regulate perovskite growth and stabilize buried interfaces. Solar cells incorporating MEM-MIM-Cl achieved a power conversion efficiency of 25.9% and retained 90% initial performance after 1,500 hrs' 1-sun illumination and 90°C thermal stress - surpassing prior benchmarks under milder ageing conditions. Many thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project#templated-perovskite-optoelectronics\" target=\"_blank\"><u>Templated Crystallization in Perovskite Optoelectronics</u></a>.</p>",

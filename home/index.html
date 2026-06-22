@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="icon" href="/assets/icons/SWH_logo.png">
+  <link rel="icon" href="/assets/icons/SWH_logo.svg">
 
   <meta name="description" content="W. Shao Laboratory — Electronic and Photonic Materials Discovery, Department of Chemistry, University of Georgia.">
   <meta name="robots" content="index,follow">
@@ -38,8 +38,17 @@
 
     <section class="container home-intro">
       <div class="home-intro__hero">
-        <p class="text-lead">Where chemistry meets light.</p>
+        <p class="text-lead tagline-lines">
+          <span class="tagline-line">We establish fundamental rules of templated molecular assembly</span>
+          <span class="tagline-line">in condensed, low-dimensional organic-inorganic hybrid matter,</span>
+          <span class="tagline-line">and study their light-matter interactions.</span>
+        </p>
       </div>
+      <style>
+        .tagline-lines { display: block; }
+        .tagline-line { display: block; opacity: 0; transform: translateY(50px); transition: opacity 5s ease, transform 2s ease; }
+        .tagline-line.visible { opacity: 1; transform: translateY(0); }
+      </style>
 
       <div class="home-intro__news home-news">
         <div class="section-header">
@@ -66,6 +75,16 @@
 
   <div id="site-footer"></div>
 
+  <script>
+    (function () {
+      var lines = document.querySelectorAll('.tagline-line');
+      var delay = 400;
+      var gap = 1000;
+      lines.forEach(function (line, i) {
+        setTimeout(function () { line.classList.add('visible'); }, delay + i * gap);
+      });
+    })();
+  </script>
   <script src="/assets/js/render-news.js" defer></script>
   <script src="/assets/js/render-gallery.js" defer></script>
   <script src="/assets/js/partials.js" defer></script>

@@ -137,7 +137,7 @@ Each person/mascot looks like this:
   "photo": "/assets/img/people/first-last.jpg",
   "section": "member",
   "bio": "<p>A paragraph or two about this person.</p>",
-  "email": "username at uga dot edu"
+  "email": "username@uga.edu"
 }
 ```
 
@@ -151,7 +151,7 @@ Each person/mascot looks like this:
 | `photo` | Yes | Path to a square photo (see [Adding Photos](#9-adding-photos)). |
 | `section` | Yes | `"pi"`, `"member"`, or `"mascot"` — see below. |
 | `bio` | Yes | Shown in the pop-up window when their card is clicked. Can be several `<p>` paragraphs. |
-| `email` | No | Shown in the pop-up. Lab convention writes it as `"name at uga dot edu"` to avoid spam. |
+| `email` | No | Shown in the pop-up as a clickable `mailto:` link. Write it as a normal address, e.g. `"name@uga.edu"`. |
 | `blurb` | PI only | A one-sentence research summary shown directly on the page under the PI's name. |
 | `cv` | PI only | Path to a PDF (e.g. `/assets/files/CV_Name.pdf`), adds a "Download CV" button to the PI's pop-up. |
 
@@ -327,7 +327,15 @@ This is the list of links in the top navigation bar:
 - `href` is the page it links to.
 - The order in the file is the order shown in the menu.
 
-To add a link, copy one of the lines, give it a new `label` and `href`, and add a comma. To remove a link, delete its line (and make sure the last line in the list has **no** trailing comma).
+To add a link, copy one of the lines, give it a new `label` and `href`, and add a comma. To remove a link permanently, delete its line (and make sure the last line in the list has **no** trailing comma).
+
+To temporarily hide a tab without deleting it, add `"hidden": true` to its entry:
+
+```json
+{ "label": "Hiring", "href": "/hiring/", "hidden": true }
+```
+
+Remove the `"hidden": true` (or set it to `false`) to show it again. Note: JSON files don't support `//` comments — adding one anywhere in this file will break the entire menu.
 
 ---
 

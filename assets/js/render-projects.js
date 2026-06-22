@@ -3,7 +3,7 @@
 
   function projectCardHTML(project) {
     return (
-      '<a class="project-card" href="/research/project#' + project.slug + '">' +
+      '<a class="project-card" href="/research/project.html#' + project.slug + '">' +
         '<img class="project-card__img" src="' + project.image + '" alt="' + project.title + '">' +
         '<div class="project-card__body">' +
           '<h3 class="project-card__title">' + project.title + '</h3>' +

@@ -75,9 +75,13 @@ button {
 /* ---------------------------------------------------------------------- */
 html {
   font-size: 100%;
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-text);
@@ -86,6 +90,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background 0.2s ease, color 0.2s ease;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -362,8 +370,8 @@ main section {
 }
 
 .site-footer__icons img {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   opacity: 0.7;
   transition: opacity 0.15s ease;
 }
@@ -449,6 +457,49 @@ main section {
 
 .modal-content button[type="submit"]:hover {
   opacity: 0.85;
+}
+
+/* ==========================================================================
+   Image Lightbox (click a news image to view it full-size)
+   ========================================================================== */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 24, 33, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: var(--space-3);
+  cursor: zoom-out;
+}
+
+.image-lightbox__img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  cursor: default;
+}
+
+.image-lightbox__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  font-size: 2rem;
+  line-height: 1;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.image-lightbox__close:hover {
+  opacity: 0.8;
 }
 
 /* ==========================================================================
@@ -540,6 +591,7 @@ main section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: zoom-in;
 }
 
 .news-card__dots {
@@ -641,10 +693,11 @@ main section {
 
 .news-feed__item {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: var(--space-3);
   padding-bottom: var(--space-4);
   border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: 88px;
 }
 
 .news-feed__item:last-child {
@@ -656,6 +709,7 @@ main section {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  cursor: zoom-in;
 }
 
 .news-feed__date {
@@ -681,34 +735,11 @@ main section {
    Home: Gallery Mosaic
    ========================================================================== */
 .gallery-mosaic {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
   gap: var(--space-2);
-}
-
-.gallery-mosaic__row {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.gallery-mosaic__row--top {
-  height: 320px;
-}
-
-.gallery-mosaic__row--bottom {
-  height: 200px;
-}
-
-.gallery-mosaic__row--top .tile.t1 {
-  flex: 1.6;
-}
-
-.gallery-mosaic__row--top .tile.t2 {
-  flex: 1;
-}
-
-.gallery-mosaic__row--bottom .tile {
-  flex: 1;
 }
 
 .tile {
@@ -735,19 +766,16 @@ main section {
   line-height: 1.3;
 }
 
-.tile.t1 .tile__title {
-  font-size: 1.25rem;
-}
-
 @media (max-width: 760px) {
-  .gallery-mosaic__row {
-    flex-direction: column;
-    height: auto;
+  .gallery-mosaic {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
 
-  .gallery-mosaic__row .tile {
-    flex: none;
+  .tile {
     aspect-ratio: 4 / 3;
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
   }
 }
 
@@ -780,7 +808,7 @@ main section {
 }
 
 .section-heading--spaced {
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 /* ==========================================================================
@@ -817,6 +845,8 @@ main section {
 
 .about-pi__bio p {
   margin-top: var(--space-2);
+  max-width: 80ch;
+  text-align: justify;
 }
 
 .about-pi__email {
@@ -990,7 +1020,7 @@ main section {
 }
 
 .featured-pubs__grid .pub-highlight__media {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
 }
 
 .featured-pubs__grid .pub-highlight__title {
@@ -1071,21 +1101,44 @@ main section {
 /* ==========================================================================
    Research: Intro
    ========================================================================== */
-.research-intro__subtitle {
-  margin-top: var(--space-1);
+.research-intro__heading-line {
+  display: block;
+}
+
+.research-intro__heading-line--1 {
   color: var(--color-accent);
+}
+
+.research-intro__heading-line--2 {
+  color: #33363c;
+}
+
+[data-theme="dark"] .research-intro__heading-line--2 {
+  color: #aab0b8;
+}
+
+.research-intro__lede {
+  margin-top: var(--space-2);
+}
+
+.research-intro__subtitle {
+  margin-top: var(--space-2);
+  color: var(--color-accent);
+  font-weight: 400;
 }
 
 .research-intro__layout {
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: var(--space-4);
+  grid-template-columns: 5fr 6fr;
+  gap: var(--space-2);
   align-items: center;
-  margin-top: var(--space-4);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .research-intro__layout p {
   max-width: none;
+  text-align: justify;
 }
 
 .research-intro__img {
@@ -1097,6 +1150,14 @@ main section {
 @media (max-width: 760px) {
   .research-intro__layout {
     grid-template-columns: 1fr;
+  }
+
+  .research-intro__img {
+    order: -1;
+  }
+
+  .research-intro__heading-line {
+    text-align: left;
   }
 }
 
@@ -1146,7 +1207,10 @@ main section {
 
 .project-fig {
   display: block;
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: min(1000px, 100%);
+  max-height: 500px;
   border-radius: 12px;
 }
 
@@ -1162,8 +1226,31 @@ main section {
   margin-top: var(--space-1);
 }
 
+.project-body p {
+  text-align: justify;
+  max-width: 1000px;
+}
+
 @media (max-width: 760px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   Hiring
+   ========================================================================== */
+.hiring-list {
+  list-style: disc;
+  list-style-position: outside;
+  max-width: 700px;
+  padding-left: 1.5em;
+}
+
+.hiring-list li {
+  line-height: 2;
+}
+
+.hiring-list li::marker {
+  color: var(--color-text-muted);
 }

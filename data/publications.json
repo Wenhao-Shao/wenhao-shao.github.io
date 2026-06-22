@@ -8,8 +8,12 @@
   {
     "title": "Air-stable Room-temperature Quasi-2D Tin Iodide Perovskite Microlasers",
     "authors": "Cho, S.&dagger;; Shao, W.&dagger;; <span class=\"mentee\">Kim, J. H.</span>; Dou, L.*; Yun, S. -H.*",
-    "year": 2025,
-    "citation": "Under Review. Check preprint <u><a href=\"https://arxiv.org/abs/2507.08180\" target=\"_blank\">here</a></u>."
+    "journal": "ACS Photonics",
+    "year": 2026,
+    "link": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02285",
+    "citation": "<span class=\"pub-journal\">ACS Photonics</span> 2026, 13, 2367-2374.",
+    "featured": "secondary",
+    "highlightImage": "/assets/img/publications/2026-acs-photonics.jpg"
   },
   {
     "title": "Hydrogen-Bonded Organic Framework Enables Phase-Pure Layered Tin Perovskite Nanowires For Room Temperature Nanolasing",
@@ -19,7 +23,7 @@
     "link": "https://pubs.acs.org/doi/full/10.1021/jacs.5c14431",
     "citation": "<span class=\"pub-journal\">J. Am. Chem. Soc.</span> 2026, 148, 483-493.",
     "featured": "secondary",
-    "highlightImage": "/assets/img/publications/Map_purple-gold.jpg"
+    "highlightImage": "/assets/img/publications/2026-jacs.png"
   },
   {
     "title": "Modulation of the Electronic and Vibrational Landscape in Lead Organic Chalcogenides",
@@ -33,12 +37,12 @@
     "title": "Ionic Liquids Improve the Long-Term Stability of Perovskite Solar Cells",
     "authors": "Xu, W.&dagger;; Shao, W.&dagger;; Tang, Y.; Lin, C.; Yang, H.; Yang, Y. -T.; <span class=\"mentee\">Kim, J. H.</span>; Lee, G.; Kumar, P.; Pedersen, K. R.; Coffey, A. H.; Harvey, S. P.; Graham, K. R.; Zhu, C.; Zhu, K.; Dou, L.*",
     "journal": "Nat. Energy",
-    "year": 2025,
+    "year": 2026,
     "link": "https://www.nature.com/articles/s41560-025-01906-6",
-    "citation": "<span class=\"pub-journal\">Nat. Energy</span> 2025.",
-    "newsHighlight": "&bull; News highlight: <u><a href=\"https://scienmag.com/ionic-liquids-boost-perovskite-solar-cell-stability/\" target=\"_blank\">Science Magazine</a></u>, <u><a href=\"https://bioengineer.org/ionic-liquids-boost-perovskite-solar-cell-stability/\" target=\"_blank\">Bioengineer.org</a></u>.",
+    "citation": "<span class=\"pub-journal\">Nat. Energy</span> 2026, 11, 209-218.",
+    "newsHighlight": "&bull; News highlight: <u><a href=\"https://time.news/high-temperature-solar-cells-90-performance-at-90c/#google_vignette\" target=\"_blank\">Tine.News</a></u>, <u><a href=\"https://scienmag.com/ionic-liquids-boost-perovskite-solar-cell-stability/\" target=\"_blank\">Science Magazine</a></u>, <u><a href=\"https://bioengineer.org/ionic-liquids-boost-perovskite-solar-cell-stability/\" target=\"_blank\">Bioengineer.org</a></u>.",
     "featured": "secondary",
-    "highlightImage": "/assets/img/publications/earth.jpg"
+    "highlightImage": "/assets/img/publications/2025-nat-energy.png"
   },
   {
     "title": "Grain Engineering For Efficient Near-Infrared Perovskite Light-Emitting Diodes",
@@ -55,9 +59,7 @@
     "year": 2024,
     "link": "https://www.nature.com/articles/s41467-024-51501-8",
     "citation": "<span class=\"pub-journal\">Nat. Commun.</span> 2024, 15, 10282.",
-    "newsHighlight": "&bull; News highlight: <u><a href=\"https://news.engin.umich.edu/2024/12/faster-organic-phosphorescence-for-better-display-tech/\" target=\"_blank\">Michigan Engineering</a></u>.",
-    "featured": "secondary",
-    "highlightImage": "/assets/img/publications/bear.jpg"
+    "newsHighlight": "&bull; News highlight: <u><a href=\"https://news.engin.umich.edu/2024/12/faster-organic-phosphorescence-for-better-display-tech/\" target=\"_blank\">Michigan Engineering</a></u>."
   },
   {
     "title": "Exciton Dynamics In Layered Halide Perovskite Light-Emitting Diodes",
@@ -83,7 +85,7 @@
     "link": "https://www.nature.com/articles/s41586-024-07925-9",
     "citation": "<span class=\"pub-journal\">Nature</span> 2024, 633, 567-574.",
     "featured": "secondary",
-    "highlightImage": "/assets/img/publications/helical_2.jpg"
+    "highlightImage": "/assets/img/publications/2024-nature.png"
   },
   {
     "title": "Triplet Management At Ligand-Perovskite Interface To Enhanced Photovoltaics Performance",
@@ -102,7 +104,7 @@
     "citation": "<span class=\"pub-journal\">Science</span> 2024, 384, 1000-1006.",
     "newsHighlight": "&bull; News highlight: <u><a href=\"https://www.purdue.edu/newsroom/releases/2024/Q2/purdue-researchers-crystal-engineering-modifies-2d-metal-halide-perovskites-into-1d-nanowires.html\" target=\"_blank\">Purdue</a></u>, <u><a href=\"https://bioengineer.org/purdue-researchers-crystal-engineering-modifies-2d-metal-halide-perovskites-into-1d-nanowires/\" target=\"_blank\">Bioengineer.org</a></u>, <u><a href=\"https://www.sciencedaily.com/releases/2024/06/240606152212.htm\" target=\"_blank\">ScienceDaily</a></u>, <u><a href=\"https://phys.org/news/2024-06-crystal-2d-metal-halide-perovskites.html\" target=\"_blank\">Phys.org</a></u>.",
     "featured": "main",
-    "highlightImage": "/assets/img/publications/lasing_1.jpg",
+    "highlightImage": "/assets/img/publications/2024-science-nanowire.jpg",
     "highlightDescription": "A crystal-engineering strategy uses small-molecule templating to convert two-dimensional halide perovskites into phase-pure, one-dimensional nanowires, enabling room-temperature lasing and opening new routes to perovskite nanophotonics."
   },
   {

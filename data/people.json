@@ -5,51 +5,60 @@
     "title": "Assistant Professor of Chemistry",
     "photo": "/assets/img/people/wenhao-shao.jpg",
     "section": "pi",
-    "blurb": "Molecular design, self-assembly, and photophysics of organic and organic-inorganic hybrid semiconductors.",
-    "bio": "<p>Wenhao was born and raised in Shanghai, China. He earned his B.S. in Chemistry from Fudan University in 2017, with a thesis focusing on rare-earth upconversion luminescent nanoparticles under Professors <a href=\"https://chembioins.sjtu.edu.cn/info/1028/1325.htm\" target=\"_blank\"><u>Fuyou Li</u></a> and <a href=\"https://chemistry.fudan.edu.cn/chemen/a3/6b/c22414a238443/page.htm\" target=\"_blank\"><u>Wei Feng</u></a>. He completed his Ph.D. in Chemistry at the University of Michigan, Ann Arbor, in 2022, working with Professor <a href=\"https://mse.engin.umich.edu/people/jinsang\" target=\"_blank\"><u>Jinsang Kim</u></a> on the computation-assisted molecular design, synthesis, and photophysics of organic triplet emitters. He then joined Purdue University as a postdoctoral researcher in Professor <a href=\"https://letiandougroup.com/\" target=\"_blank\"><u>Letian Dou</u></a>’s group, focusing on metal-halide perovskites.</p><p>In 2025, Wenhao began his independent career as an <a href=\"https://www.chem.uga.edu/directory/people/wenhao-shao\" target=\"_blank\"><u>Assistant Professor of Chemistry</u></a> at the <a href=\"https://www.chem.uga.edu/research\" target=\"_blank\"><u>University of Georgia</u></a>. His research interests include molecular design, self-assembly, and photophysics of purely organic semiconductors and organic-inorganic hybrid materials, with an emphasis on their photonic and electronic applications.</p><p><strong>Address</strong><br>3254 iSTEM-2, 302 E Campus Rd, Athens, GA 30602</p>",
-    "email": "swh at uga dot edu",
+    "blurb": "",
+    "bio": "<p>Wenhao was born and raised in Shanghai, China. He earned his B.S. in Chemistry from Fudan University in 2017, with a thesis focusing on rare-earth upconversion luminescent nanoparticles under Professors <a href=\"https://chembioins.sjtu.edu.cn/info/1028/1325.htm\" target=\"_blank\"><u>Fuyou Li</u></a> and <a href=\"https://chemistry.fudan.edu.cn/chemen/a3/6b/c22414a238443/page.htm\" target=\"_blank\"><u>Wei Feng</u></a>. He completed his Ph.D. in Chemistry at the University of Michigan, Ann Arbor, in 2022, working with Professor <a href=\"https://mse.engin.umich.edu/people/jinsang\" target=\"_blank\"><u>Jinsang Kim</u></a> on the computation-assisted molecular design, synthesis, and photophysics of organic triplet emitters. He then joined Purdue University as a postdoctoral researcher in Professor <a href=\"https://letiandougroup.com/\" target=\"_blank\"><u>Letian Dou</u></a>’s group, focusing on metal-halide perovskites.</p><p>In 2025, Wenhao began his independent career as an <a href=\"https://www.chem.uga.edu/directory/people/wenhao-shao\" target=\"_blank\"><u>Assistant Professor of Chemistry</u></a> at the <a href=\"https://www.chem.uga.edu/research\" target=\"_blank\"><u>University of Georgia</u></a>. His research interests include molecular design, self-assembly, and photophysics of purely organic semiconductors and organic-inorganic hybrid materials, with an emphasis on their photonic and electronic applications.</p><p><strong>Address:</strong> 3254 iSTEM-2, 302 E Campus Rd, Athens, GA 30602</p>",
+    "email": "swh@uga.edu",
     "cv": "/assets/files/CV_Wenhao_Shao.pdf"
   },
   {
     "slug": "le-wei",
-    "name": "Le, Wei",
+    "name": "Wei Le",
     "title": "Postdoctoral Researcher",
     "photo": "/assets/img/people/le-wei.jpg",
     "section": "member",
     "bio": "<p>Dr. Wei received his Ph.D. in Electrical Engineering from Iowa State University. His research focuses on photonic devices and micro/nanofabrication, with experience in semiconductor processing (e.g., oxidation, etching, photolithography, thin-film deposition) and optical instrumentation. His prior work includes chalcogenide material–based photonic crystal structures and resonant/pyroelectric device platforms for wavelength-selective sensing, as well as related modeling and simulation using tools such as Lumerical FDTD, Synopsys Rsoft, and COMSOL Multiphysics.</p>",
-    "email": "weile1209 at uga dot edu"
+    "email": "weile1209@uga.edu"
   },
   {
     "slug": "chooi-wai-loon",
-    "name": "Chooi, Wai Loon",
+    "name": "Wai Loon Chooi",
     "title": "Ph.D. Student, Physics",
     "photo": "/assets/img/people/chooi-wai-loon.jpg",
     "section": "member",
-    "bio": "<p>Wai Loon was born in Kedah but raised mostly in Malacca, Malaysia. He earned his B.S. in Industrial Physics from Universiti Malaysia Sabah in 2022, completing a thesis on simulation-based studies of organic molecules for organic light-emitting diode applications. He is currently a Ph.D. student in the Department of Physics and Astronomy and joined the lab in Fall 2025.</p>",
-    "email": "wc92424 at uga dot edu"
+    "bio": "<p>Wai Loon was born in Kedah but raised mostly in Malacca, Malaysia. He earned his B.S. in Industrial Physics from Universiti Malaysia Sabah in 2022, completing a thesis on simulation-based studies of organic molecules for organic light-emitting diode applications. He is currently a Ph.D. student (2024 cohort) in the Department of Physics and Astronomy and joined the lab in Fall 2025.</p>",
+    "email": "wc92424@uga.edu"
   },
   {
     "slug": "wang-yue",
-    "name": "Wang, Yue",
+    "name": "Yue Wang",
     "title": "Ph.D. Student, Chemistry",
     "photo": "/assets/img/people/wang-yue.png",
     "section": "member",
-    "bio": "<p>Yue earned her Bachelor’s degree from Sichuan Agricultural University. Her research interest focuses on the design and synthesis of novel crystalline materials, as well as their potential applications in biomedical research. Yue is currently a Ph.D. student in the Department of Chemistry and joined the lab in Fall 2025.</p>",
-    "email": "Yue.Wang6 at uga dot edu"
+    "bio": "<p>Yue earned her Bachelor’s degree from Sichuan Agricultural University. Her research interest focuses on the design and synthesis of novel crystalline materials, as well as their potential applications in biomedical research. Yue is currently a Ph.D. student (2025 cohort) in the Department of Chemistry and joined the lab in Fall 2025.</p>",
+    "email": "Yue.Wang6@uga.edu"
+  },
+  {
+    "slug": "owen-sexton",
+    "name": "Owen Sexton",
+    "title": "Undergrad Student, Chemistry",
+    "photo": "/assets/img/people/owen-sexton.jpg",
+    "section": "member",
+    "bio": "<p>Owen is an undergraduate chemistry major (2024 Cohort) from Georgia. He likes organic chemistry and enjoys working in the lab.</p>",
+    "email": "owen.sexton@uga.edu"
   },
   {
     "slug": "ichchha-badgujjar",
-    "name": "Ichchha, Badgujjar",
-    "title": "Ph.D. Student, Chemistry (Rotation)",
+    "name": "Ichchha Badgujjar",
+    "title": "Rotation Ph.D. Student, Chemistry",
     "photo": "/assets/img/people/ichchha-badgujjar.jpg",
     "section": "alumni",
-    "bio": "<p>Ichchha is a second-year Ph.D. student in the Department of Chemistry. She joined the lab in Fall 2025 as a rotating student.</p>",
-    "email": "Ichchha.Badgujjar at uga dot edu"
+    "bio": "<p>Ichchha is a Chemistry Ph.D. student in the 2024 cohort. She rotated with us in Fall 2025 and Spring 2026. Ichchha is currently working with Prof. Vladimir Popik.</p>",
+    "email": "Ichchha.Badgujjar@uga.edu"
   },
   {
     "slug": "snowball",
     "name": "Snowball",
-    "title": "Lab Mascot (Pomeranian)",
+    "title": "",
     "photo": "/assets/img/people/snowball.jpg",
     "section": "mascot",
     "bio": "<p>Dogtor “Snowball” the Pomeranian was born in February 2024 in West Lafayette, IN.</p>",
@@ -58,9 +67,17 @@
   {
     "slug": "sidney",
     "name": "Sidney",
-    "title": "Service Dog in Training",
+    "title": "",
     "photo": "/assets/img/people/sidney.png",
     "section": "mascot",
     "bio": "<p>Hi everyone! I’m Sidney, and I’m a fantastic Service Dog in training! You’ll see me around the office sometimes for a little visit. Don’t worry, when you’re busy or out, I’m the quietest dog—just chilling patiently under the desk. If those long experiments are making you stressed, come over and give me a good pet! It’s my job to help you relax! 🐾</p>"
+  },
+  {
+    "slug": "pawz",
+    "name": "Pawz",
+    "title": "",
+    "photo": "/assets/img/people/pawz.jpg",
+    "section": "mascot",
+    "bio": "<p>Pawz is a rescue dog adopted from a shelter. She’s an American Bully–Doodle mix with lots of energy and a love for the outdoors. This sweet girl is always ready for an adventure!</p>"
   }
 ]

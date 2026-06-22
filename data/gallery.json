@@ -1,27 +1,43 @@
 [
   {
-    "image": "/assets/img/gallery/Map_purple-gold.jpg",
+    "image": "/assets/img/publications/2024-science-nanowire.jpg",
     "title": "Layered Perovskite Nanowires",
-    "link": "https://www.science.org/doi/10.1126/science.adl0920"
+    "link": "https://www.science.org/doi/10.1126/science.adl0920",
+    "cols": 1,
+    "rows": 1
   },
   {
-    "image": "/assets/img/gallery/twist_1.jpg",
+    "image": "/assets/img/publications/2026-twist-ribbon.jpg",
     "title": "Twisted Ribbons",
-    "link": "/research/"
+    "link": "/research/",
+    "cols": 2,
+    "rows": 2
   },
   {
     "image": "/assets/img/gallery/helical_1.jpg",
     "title": "Helical Ribbons",
-    "link": "/research/"
+    "link": "/research/",
+    "cols": 1,
+    "rows": 1
   },
   {
     "image": "/assets/img/gallery/bear.jpg",
-    "title": "Halide Perovskite Crystals",
+    "title": "A Valentine's Day of Halide Perovskites",
     "link": "/research/"
   },
   {
     "image": "/assets/img/gallery/chocolate.jpg",
     "title": "Chocolate Crystals",
+    "link": "/research/"
+  },
+  {
+    "image": "/assets/img/gallery/earth.jpg",
+    "title": "",
+    "link": "/research/"
+  },
+  {
+    "image": "/assets/img/gallery/lasing_1.jpg",
+    "title": "Nanolasers",
     "link": "/research/"
   }
 ]

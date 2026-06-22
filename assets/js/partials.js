@@ -23,6 +23,8 @@
         if (!list) return;
 
         links.forEach(function (item) {
+          if (item.hidden) return;
+
           var li = document.createElement('li');
           var a = document.createElement('a');
           a.href = item.href;

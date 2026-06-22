@@ -12,7 +12,7 @@
 
   function personModalHTML(person) {
     var email = person.email
-      ? '<p class="person-modal__email"><strong>Email:</strong> ' + person.email + '</p>'
+      ? '<p class="person-modal__email"><strong>Email:</strong> <a href="mailto:' + person.email + '">' + person.email + '</a></p>'
       : '';
 
     return '' +
@@ -42,7 +42,7 @@
         '<p class="text-muted">' + pi.title + '</p>' +
         blurb +
         '<div class="about-pi__bio">' + pi.bio + '</div>' +
-        '<p class="about-pi__email"><strong>Email:</strong> ' + pi.email + '</p>' +
+        '<p class="about-pi__email"><strong>Email:</strong> <a href="mailto:' + pi.email + '">' + pi.email + '</a></p>' +
         '<div class="about-pi__actions">' +
           '<button type="button" class="btn btn-primary" id="pi-message-btn">Leave a message</button>' +
           cvBtn +
