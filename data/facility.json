@@ -1,0 +1,56 @@
+[
+  {
+    "image": "/assets/img/facility/5_wet-lab.jpg",
+    "title": "Wet Lab @3247",
+    "cols": 3,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/4_synthesis-hood-schlenk-line.jpg",
+    "title": "Synthesis Hood & Schlenk Line",
+    "cols": 2,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/1_glassware.jpg",
+    "title": "",
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/8_glovebox-spin-coater.jpg",
+    "title": "Glovebox & Spin Coater",
+    "cols": 2,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/2_purgebox.jpg",
+    "title": "Purge Box",
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/7_full-stokes-imaging-spectrograph.jpg",
+    "title": "Integrated Full-Stokes Imaging System with Solid-State Laser, Microscope, Spectrograph, and Polarimeter",
+    "cols": 2,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/3_vintage-inverted-microscope.jpg",
+    "title": "Inverted Microscope (vintage)",
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/6_crystal-screening.jpg",
+    "title": "Crystal Screening",
+    "cols": 2,
+    "rows": 2
+  },
+  {
+    "image": "/assets/img/facility/7_full-stokes-imaging-spectrograph-2.jpg",
+    "title": "Full-Stokes Imaging Spectrograph",
+    "cols": 1,
+    "rows": 2
+  }
+]

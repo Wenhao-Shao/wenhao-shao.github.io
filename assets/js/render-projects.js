@@ -2,9 +2,12 @@
   'use strict';
 
   function projectCardHTML(project) {
+    var imgTag = project.image
+      ? '<img class="project-card__img" src="' + project.image + '" alt="' + project.title + '">'
+      : '';
     return (
       '<a class="project-card" href="/research/project.html#' + project.slug + '">' +
-        '<img class="project-card__img" src="' + project.image + '" alt="' + project.title + '">' +
+        imgTag +
         '<div class="project-card__body">' +
           '<h3 class="project-card__title">' + project.title + '</h3>' +
           '<p class="project-card__summary">' + project.summary + '</p>' +

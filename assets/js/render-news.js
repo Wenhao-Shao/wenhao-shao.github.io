@@ -161,16 +161,107 @@
       });
   }
 
+  var MONTH_ABBR = { Jan: 'Jan', Feb: 'Feb', Mar: 'Mar', Apr: 'Apr', May: 'May', Jun: 'Jun', June: 'Jun', Jul: 'Jul', July: 'Jul', Aug: 'Aug', Sep: 'Sep', Oct: 'Oct', Nov: 'Nov', Dec: 'Dec' };
+
+  function parseNewsDate(str) {
+    var parts = str.split(' ');
+    var monthRaw = parts[0];
+    var year = parts[parts.length - 1];
+    return { year: year, month: MONTH_ABBR[monthRaw] || monthRaw };
+  }
+
+  function groupByYearAndMonth(items) {
+    var years = [];
+    var yearMap = {};
+    items.forEach(function (item) {
+      var d = parseNewsDate(item.date);
+      item._year = d.year;
+      item._month = d.month;
+      if (!yearMap[d.year]) {
+        yearMap[d.year] = { year: d.year, months: [], monthMap: {}, firstId: item.id };
+        years.push(yearMap[d.year]);
+      }
+      var y = yearMap[d.year];
+      if (!y.monthMap[d.month]) {
+        y.monthMap[d.month] = { month: d.month, firstId: item.id };
+        y.months.push(y.monthMap[d.month]);
+      }
+    });
+    return years;
+  }
+
+  function renderTimeline(timelineMount, items) {
+    var years = groupByYearAndMonth(items);
+    if (years.length === 0) return;
+
+    timelineMount.innerHTML = years.map(function (y) {
+      return '' +
+        '<li class="news-timeline__year" data-year="' + y.year + '">' +
+          '<button class="news-timeline__year-btn" type="button" data-jump="' + y.firstId + '">' + y.year + '</button>' +
+          '<div class="news-timeline__months-wrap">' +
+            '<ol class="news-timeline__months">' +
+              y.months.map(function (m) {
+                return '' +
+                  '<li class="news-timeline__month" data-month="' + m.month + '">' +
+                    '<button class="news-timeline__month-btn" type="button" data-jump="' + m.firstId + '">' + m.month + '</button>' +
+                  '</li>';
+              }).join('') +
+            '</ol>' +
+          '</div>' +
+        '</li>';
+    }).join('');
+
+    function setActive(year, month) {
+      timelineMount.querySelectorAll('.news-timeline__year').forEach(function (el) {
+        el.classList.toggle('is-active', el.getAttribute('data-year') === year);
+      });
+      timelineMount.querySelectorAll('.news-timeline__month').forEach(function (el) {
+        el.classList.toggle('is-active', el.getAttribute('data-month') === month);
+      });
+    }
+
+    timelineMount.addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-jump]');
+      if (!btn) return;
+      var target = document.getElementById('news-' + btn.getAttribute('data-jump'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    var feedItems = Array.prototype.slice.call(document.querySelectorAll('.news-feed__item'));
+    if (feedItems.length === 0) return;
+
+    var current = null;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          if (id !== current) {
+            current = id;
+            var item = items[Number(id.replace('news-', ''))];
+            setActive(item._year, item._month);
+          }
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    feedItems.forEach(function (item) { observer.observe(item); });
+
+    setActive(years[0].year, years[0].months[0].month);
+  }
+
   function renderNewsList() {
     var mount = document.getElementById('news-feed');
     if (!mount) return;
 
+    var timelineMount = document.getElementById('news-timeline-list');
+
     fetch('/data/news.json')
       .then(function (res) { return res.json(); })
       .then(function (items) {
-        mount.innerHTML = items.map(function (item, index) {
+        items.forEach(function (item, index) { item.id = index; });
+
+        mount.innerHTML = items.map(function (item) {
           return '' +
-            '<li class="news-feed__item" id="news-' + index + '">' +
+            '<li class="news-feed__item" id="news-' + item.id + '">' +
               '<div class="news-feed__media"><img src="' + item.image + '" alt="' + escapeAttr(item.title) + '"></div>' +
               '<div class="news-feed__body">' +
                 '<span class="news-feed__date text-muted">' + item.date + '</span>' +
@@ -181,6 +272,10 @@
         }).join('');
 
         wireLightbox(mount);
+
+        if (timelineMount) {
+          renderTimeline(timelineMount, items);
+        }
 
         if (window.location.hash) {
           var target = document.getElementById(window.location.hash.slice(1));
