@@ -1,0 +1,37 @@
+[
+  {
+    "source": "Yahoo News",
+    "headline": "Scientists make groundbreaking discovery that could revolutionize solar panels",
+    "link": "https://www.yahoo.com/news/articles/scientists-groundbreaking-discovery-could-revolutionize-133000021.html",
+    "image": "/assets/img/media/yahoo-nat-energy.jpg",
+    "publication": "2026-nat-energy-ionic-liquids"
+  },
+  {
+    "source": "Tech Xplore",
+    "headline": "Ionic liquids slow perovskite degradation: Solar cells retain 90% performance at 90°C",
+    "link": "https://techxplore.com/news/2025-12-ionic-liquids-perovskite-degradation-solar.html",
+    "image": "/assets/img/media/techxplore-nat-energy.jpg",
+    "publication": "2026-nat-energy-ionic-liquids"
+  },
+  {
+    "source": "Purdue University",
+    "headline": "Crystal engineering modifies 2D metal halide perovskites into 1D nanowires",
+    "link": "https://www.purdue.edu/newsroom/releases/2024/Q2/purdue-researchers-crystal-engineering-modifies-2d-metal-halide-perovskites-into-1d-nanowires.html",
+    "image": "/assets/img/media/purdue-science.jpg",
+    "publication": "2024-science-nanowires"
+  },
+  {
+    "source": "Phys.org",
+    "headline": "Crystal engineering modifies 2D metal halide perovskites into 1D nanowires",
+    "link": "https://phys.org/news/2024-06-crystal-2d-metal-halide-perovskites.html",
+    "image": "/assets/img/media/physorg-science.jpg",
+    "publication": "2024-science-nanowires"
+  },
+  {
+    "source": "Michigan Engineering",
+    "headline": "Faster organic phosphorescence for better display tech",
+    "link": "https://news.engin.umich.edu/2024/12/faster-organic-phosphorescence-for-better-display-tech/",
+    "image": "/assets/img/media/michigan-nat-commun.jpg",
+    "publication": "2024-nat-commun-triplet-tmd"
+  }
+]

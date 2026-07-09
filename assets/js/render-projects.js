@@ -23,7 +23,16 @@
     if (previousGrid) previousGrid.innerHTML = previous.map(projectCardHTML).join('');
   }
 
-  function renderDetail(titleEl, bodyEl, projects) {
+  function pubRefHTML(pub, index) {
+    var titleEl = pub.link
+      ? '<u><a href="' + pub.link + '" target="_blank">' + pub.title + '</a></u>'
+      : '<span>' + pub.title + '</span>';
+    return '<p class="project-pub-ref">[' + (index + 1) + '] ' + titleEl +
+      '<br><span class="text-muted">' + pub.authors + '</span>' +
+      '<br><span class="text-muted">' + pub.citation + '</span></p>';
+  }
+
+  function renderDetail(titleEl, bodyEl, projects, pubMap) {
     var id = window.location.hash.slice(1);
     var project = null;
     for (var i = 0; i < projects.length; i++) {
@@ -41,7 +50,28 @@
     }
 
     titleEl.textContent = project.title;
-    bodyEl.innerHTML = project.body;
+
+    var html = project.body;
+
+    if (project.publications && project.publications.length > 0) {
+      var pubsHTML = '<p><strong>Read more:</strong></p>';
+      for (var j = 0; j < project.publications.length; j++) {
+        var ref = project.publications[j];
+        if (typeof ref === 'string') {
+          var pub = pubMap[ref];
+          if (pub) {
+            pubsHTML += pubRefHTML(pub, j);
+          }
+        } else if (ref.external) {
+          pubsHTML += '<p class="project-pub-ref">[' + (j + 1) + '] ' +
+            '<u><a href="' + ref.link + '" target="_blank">' + ref.title + '</a></u>' +
+            '<br><span class="text-muted">' + ref.citation + '</span></p>';
+        }
+      }
+      html += pubsHTML;
+    }
+
+    bodyEl.innerHTML = html;
     document.title = project.title + ' — W. Shao Laboratory';
   }
 
@@ -52,11 +82,23 @@
 
   if (!gridCurrent && !gridPrevious && !(titleEl && bodyEl)) return;
 
-  fetch('/data/projects.json')
-    .then(function (res) { return res.json(); })
-    .then(function (projects) {
+  var projectsPromise = fetch('/data/projects.json').then(function (res) { return res.json(); });
+  var pubsPromise = (titleEl && bodyEl)
+    ? fetch('/data/publications.json').then(function (res) { return res.json(); })
+    : Promise.resolve([]);
+
+  Promise.all([projectsPromise, pubsPromise])
+    .then(function (results) {
+      var projects = results[0];
+      var pubs = results[1];
+
+      var pubMap = {};
+      pubs.forEach(function (p) {
+        if (p.slug) pubMap[p.slug] = p;
+      });
+
       if (gridCurrent || gridPrevious) renderGrid(gridCurrent, gridPrevious, projects);
-      if (titleEl && bodyEl) renderDetail(titleEl, bodyEl, projects);
+      if (titleEl && bodyEl) renderDetail(titleEl, bodyEl, projects, pubMap);
     })
     .catch(function (err) {
       console.error('Failed to load projects:', err);
