@@ -1,7 +1,7 @@
 [
   { "label": "Home", "href": "/home/" },
   { "label": "News", "href": "/news/" },
-  { "label": "About", "href": "/about/" },
+  { "label": "Team", "href": "/about/" },
   { "label": "Research", "href": "/research/" },
   { "label": "Facility", "href": "/facility/", "hidden": false},
   { "label": "Publications", "href": "/publications/" },

@@ -115,8 +115,17 @@
         wireCards(mascots, people);
       }
       if (alumni) {
-        alumni.innerHTML = alumniList.map(personCardHTML).join('');
-        wireCards(alumni, people);
+        alumni.innerHTML = '<ul class="alumni-list">' + alumniList.map(function (person) {
+          return '<li><button type="button" class="alumni-list__name" data-slug="' + person.slug + '">' + person.name + '</button></li>';
+        }).join('') + '</ul>';
+        var alumniButtons = alumni.querySelectorAll('[data-slug]');
+        alumniButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var slug = btn.getAttribute('data-slug');
+            var person = people.filter(function (p) { return p.slug === slug; })[0];
+            if (person) openModal(person);
+          });
+        });
       }
     })
     .catch(function (err) {

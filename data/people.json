@@ -11,13 +11,12 @@
     "cv": "/assets/files/CV_Wenhao_Shao.pdf"
   },
   {
-    "slug": "le-wei",
-    "name": "Le Wei",
+    "slug": "mehrdad-faraji",
+    "name": "Mehrdad Faraji",
     "title": "Postdoctoral Researcher",
-    "photo": "/assets/img/people/le-wei.jpg",
+    "photo": "/assets/img/people/mehrdad-faraji.jpg",
     "section": "member",
-    "bio": "<p>Dr. Wei received his Ph.D. in Electrical Engineering from Iowa State University. His research focuses on photonic devices and micro/nanofabrication, with experience in semiconductor processing (e.g., oxidation, etching, photolithography, thin-film deposition) and optical instrumentation. His prior work includes chalcogenide material–based photonic crystal structures and resonant/pyroelectric device platforms for wavelength-selective sensing, as well as related modeling and simulation using tools such as Lumerical FDTD, Synopsys Rsoft, and COMSOL Multiphysics.</p>",
-    "email": "weile1209@uga.edu"
+    "bio": "<p>Dr. Mehrdad Faraji received his Ph.D. in Nanochemistry and Materials Science from the University of Genoa and the Italian Institute of Technology. His research focuses on the synthesis and characterization of advanced materials, with particular emphasis on 2D halide perovskites and their heterostructures for optoelectronic applications. His previous research includes the design, synthesis, and characterization of 2D halide perovskite lateral heterojunctions. In addition, he has experience in atomistic modeling and simulation using density functional theory (DFT) to investigate the structural, electronic, and optical properties of low-dimensional materials.</p>"
   },
   {
     "slug": "chooi-wai-loon",
@@ -45,6 +44,15 @@
     "section": "member",
     "bio": "<p>Owen is an undergraduate chemistry major (2024 Cohort) from Georgia. He likes organic chemistry and enjoys working in the lab. Owen joined us in July 2026.</p>",
     "email": "owen.sexton@uga.edu"
+  },
+  {
+    "slug": "le-wei",
+    "name": "Le Wei",
+    "title": "Postdoctoral Researcher",
+    "photo": "/assets/img/people/le-wei.jpg",
+    "section": "alumni",
+    "bio": "<p>Dr. Wei received his Ph.D. in Electrical Engineering from Iowa State University. His research focuses on photonic devices and micro/nanofabrication, with experience in semiconductor processing (e.g., oxidation, etching, photolithography, thin-film deposition) and optical instrumentation. His prior work includes chalcogenide material–based photonic crystal structures and resonant/pyroelectric device platforms for wavelength-selective sensing, as well as related modeling and simulation using tools such as Lumerical FDTD, Synopsys Rsoft, and COMSOL Multiphysics.</p>",
+    "email": "weile1209@uga.edu"
   },
   {
     "slug": "ichchha-badgujjar",

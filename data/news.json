@@ -1,5 +1,15 @@
 [
   {
+    "date": "July 2026",
+    "title": "New Postdoc",
+    "tag": "People",
+    "image": "/assets/img/people/mehrdad-faraji.jpg",
+    "link": "/about/",
+    "excerpt": "We warmly welcome postdoctoral researcher Dr. Mehrdad Faraji.",
+    "body": "<p>We are excited to welcome Dr. Mehrdad Faraji as our new postdoctoral researcher. Dr. Faraji received his Ph.D. in Nanochemistry and Materials Science from the University of Genoa and the Italian Institute of Technology. His research focuses on the synthesis and characterization of advanced materials, with particular emphasis on 2D halide perovskites and their heterostructures for optoelectronic applications. Welcome aboard, Mehrdad!</p>",
+    "featured": "large"
+  },
+  {
     "date": "June 2026",
     "title": "New Undergraduate Student",
     "tag": "People",
@@ -27,7 +37,7 @@
     "link": "/about/",
     "excerpt": "Wai Loon passed his qualifying exam. Congrats!",
     "body": "<p>Wai Loon passed his qualifying exam at the Department of Physics and Astronomy. Congratulations!</p>",
-    "featured": "large"
+    "featured": "small"
   },
   {
     "date": "Feb 2026",
@@ -37,7 +47,7 @@
     "link": "/about/",
     "excerpt": "We warmly welcome postdoctoral researcher Dr. Le Wei.",
     "body": "<p>We warmly welcome postdoctoral researcher Dr. Le Wei. Dr. Wei received his Ph.D. in Electrical Engineering from Iowa State University under the supervision of <a href=\"https://www.engineering.iastate.edu/people/profile/menglu/\" target=\"_blank\"><u>Prof. Meng Lu</u></a> and <a href=\"http://www.memslab.net/\" target=\"_blank\"><u>Prof. Liang Dong</u></a>. His research focuses on photonic devices and micro/nanofabrication, with experience in semiconductor processing and optical instrumentation. Dr. Wei will lead our efforts in miniaturized chiroptics and integrated biosensing.</p>",
-    "featured": "small"
+    "featured": ""
   },
   {
     "date": "Jan 2026",
