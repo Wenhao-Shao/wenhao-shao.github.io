@@ -46,6 +46,14 @@
     "email": "owen.sexton@uga.edu"
   },
   {
+    "slug": "sailike-amanzhuoli",
+    "name": "Amanzhuoli Sailike (Aman)",
+    "title": "Visiting Undergrad Researcher, Nanjing University",
+    "photo": "/assets/img/people/sailike-amanzhuoli.jpg",
+    "section": "member",
+    "bio": "<p>Aman is a visiting undergraduate researcher from Nanjing University, joining the Shao Lab from September 2026 to February 2027. He is a senior majoring in Chemistry at Nanjing University. During his time at UGA, Aman focuses on organic synthesis for the group's morphological chirality project on layered halide perovskites, and is also learning crystal growth and optical characterization techniques.</p><p>Outside the lab, Aman enjoys playing soccer. He is from the Kazakh ethnic group in Xinjiang, China, and is passionate about exploring different cultures. In his free time, he likes doing sports and working out, and listening to traditional Kazakh music.</p>"
+  },
+  {
     "slug": "le-wei",
     "name": "Le Wei",
     "title": "Postdoctoral Researcher",

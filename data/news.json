@@ -1,5 +1,35 @@
 [
   {
+    "date": "Sep 2026",
+    "title": "Visiting Researcher",
+    "tag": "People",
+    "image": "/assets/img/people/sailike-amanzhuoli.jpg",
+    "link": "/about/",
+    "excerpt": "We welcome visiting undergraduate researcher Aman from Nanjing University.",
+    "body": "<p>We are excited to welcome Amanzhuoli, Sailike (Aman), a visiting undergraduate researcher from the Department of Chemistry at Nanjing University. Aman will work with us on morphologically chiral layered halide perovskites. Welcome, Aman!</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Aug 2026",
+    "title": "Welcome to Fall 2026",
+    "tag": "People",
+    "image": "/assets/img/news/2608.jpg",
+    "link": "/about/",
+    "excerpt": "We welcome new rotation students and a fresh semester!",
+    "body": "<p>A new semester begins! We welcome our new rotation students, Allison Sargent, Hanlin Zhang, and Tiantian Zhang to the lab and look forward to an exciting and productive fall. Here's to new discoveries ahead!</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Aug 2026",
+    "title": "Interfacial Steric Hindrance in 2D Perovskites",
+    "tag": "Publication",
+    "image": "/assets/img/publications/2026-mrs.png",
+    "link": "https://link.springer.com/article/10.1557/s43579-026-01032-8",
+    "excerpt": "Our invited paper is published in MRS Communications.",
+    "body": "<p>Our invited research letter, written by Wai Loon, has been published in <a href=\"https://link.springer.com/article/10.1557/s43579-026-01032-8\" target=\"_blank\"><u>MRS Communications</u></a> as part of the Early Career Materials Researchers Special Issue. We investigate hydrogen-bonded organic framework alignment in layered perovskites and show its tunability via both inorganic metal-halide and organic halide substitution, which modulates interfacial steric hindrance. Congratulations to Wai Loon!</p>",
+    "featured": "large"
+  },
+  {
     "date": "July 2026",
     "title": "New Postdoc",
     "tag": "People",
@@ -7,7 +37,7 @@
     "link": "/about/",
     "excerpt": "We warmly welcome postdoctoral researcher Dr. Mehrdad Faraji.",
     "body": "<p>We are excited to welcome Dr. Mehrdad Faraji as our new postdoctoral researcher. Dr. Faraji received his Ph.D. in Nanochemistry and Materials Science from the University of Genoa and the Italian Institute of Technology. His research focuses on the synthesis and characterization of advanced materials, with particular emphasis on 2D halide perovskites and their heterostructures for optoelectronic applications. Welcome aboard, Mehrdad!</p>",
-    "featured": "large"
+    "featured": "small"
   },
   {
     "date": "June 2026",
@@ -17,7 +47,7 @@
     "link": "/about/",
     "excerpt": "We are excited to welcome our new undergraduate student, Owen Sexton.",
     "body": "<p>We are excited to welcome Owen Sexton, who will start working with us from Fall 2026. Owen is an undergraduate chemistry major from Georgia and has a strong interest in organic chemistry.</p>",
-    "featured": "large"
+    "featured": ""
   },
   {
     "date": "Feb 2026",

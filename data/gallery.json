@@ -1,5 +1,12 @@
 [
   {
+    "image": "/assets/img/news/2608.jpg",
+    "title": "Fall 2026",
+    "link": "/about/",
+    "cols": 1,
+    "rows": 2
+  },
+  {
     "image": "/assets/img/publications/2024-science-nanowire.jpg",
     "title": "Layered Perovskite Nanowires",
     "link": "https://www.science.org/doi/10.1126/science.adl0920",
