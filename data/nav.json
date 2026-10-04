@@ -6,5 +6,5 @@
   { "label": "Facility", "href": "/facility/", "hidden": false},
   { "label": "Publications", "href": "/publications/" },
   { "label": "Hiring", "href": "/hiring/" },
-  { "label": "Perovskite Workbench", "href": "/perovskite-workbench/" }
+  { "label": "Crystal Workbench", "href": "/Crysta/" }
 ]
