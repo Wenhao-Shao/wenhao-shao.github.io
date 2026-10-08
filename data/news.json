@@ -1,5 +1,35 @@
 [
   {
+    "date": "Oct 2026",
+    "title": "New Chemist",
+    "tag": "People",
+    "image": "/assets/img/people/tiantian-zhang.jpg",
+    "link": "/about/",
+    "excerpt": "Tiantian Zhang joins the group as a Ph.D. student.",
+    "body": "<p>We are excited to welcome Tiantian Zhang as a new Ph.D. student in the group! Tiantian received her master’s degree from Shanghai University of Engineering Science, where she worked on transition-metal-catalyzed synthesis of small molecules. In the Shao group, she will work on molecular synthesis, crystal growth, and how molecular and crystal structures shape the optical and electronic properties of functional materials. Welcome, Tiantian!</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Sep 2026",
+    "title": "Morphologically Chiral 2D Perovskites",
+    "tag": "Publication",
+    "image": "/assets/img/publications/2026-twist-ribbon.jpg",
+    "link": "https://www.nature.com/articles/s44160-026-01167-5",
+    "excerpt": "Achiral layered perovskites grow into twisted and helical ribbons, like opening seed pods.",
+    "body": "<p>Our paper on morphologically chiral nanoribbons is published in <a href=\"https://www.nature.com/articles/s44160-026-01167-5\" target=\"_blank\"><u>Nature Synthesis</u></a>. We show that layered metal-halide perovskites built entirely from achiral molecules spontaneously grow into twisted and helical ribbons. Hydrogen-bonded organic networks within the lattice generate mismatched strains, and the ribbons bend and twist to release them — geometric frustration, the same mechanism that opens chiral seed pods. Controlling growth kinetics twists nearly all ribbons in one direction, giving bulk samples chiroptical activity.</p><p>The work was highlighted by the <a href=\"https://newmaterials.uga.edu/crystals-that-twist-like-opening-seed-pods-point-to-new-optical-technologies/\" target=\"_blank\"><u>UGA New Materials Institute</u></a>.</p><p>Read More: <a href=\"/research/project.html#morphological-chirality\"><u>Morphologically Chiral 2D Materials and Miniaturized Photonics</u></a></p>",
+    "featured": "large"
+  },
+  {
+    "date": "Sep 2026",
+    "title": "New VIPR Team: Photonic Materials",
+    "tag": "Teaching",
+    "image": "/assets/img/news/2609_vipr.png",
+    "link": "https://vipr.uga.edu/team/photonic-materials-from-nanocrystals-to-bulk/",
+    "excerpt": "Undergraduates: join our new VIPR team, Photonic Materials from Nanocrystals to Bulk. Apply by Oct 31.",
+    "body": "<p>Fall 26 marks the launch of a new UGA <a href=\"https://vipr.uga.edu/\" target=\"_blank\"><u>Vertically Integrated Projects for Research (VIPR)</u></a> team, <a href=\"https://vipr.uga.edu/team/photonic-materials-from-nanocrystals-to-bulk/\" target=\"_blank\"><u>Photonic Materials from Nanocrystals to Bulk</u></a>, with Prof. Vladislav Klepov and Prof. Tina Salguero. Students on the team design, synthesize, and characterize crystals, and combine spectroscopy, microscopy, and AI-driven data analysis to understand how crystal structure shapes material properties across length scales.</p><p>The team is accepting undergraduate applications for Spring 2027 through <strong>October 31, 2026</strong>. <a href=\"https://uga.infoready4.com/#freeformCompetitionDetail/2036853\" target=\"_blank\"><u>Apply here</u></a>.</p>",
+    "featured": "large"
+  },
+  {
     "date": "Sep 2026",
     "title": "Visiting Researcher",
     "tag": "People",
@@ -7,7 +37,7 @@
     "link": "/about/",
     "excerpt": "We welcome visiting undergraduate researcher Aman from Nanjing University.",
     "body": "<p>We are excited to welcome Amanzhuoli, Sailike (Aman), a visiting undergraduate researcher from the Department of Chemistry at Nanjing University. Aman will work with us on morphologically chiral layered halide perovskites. Welcome, Aman!</p>",
-    "featured": "large"
+    "featured": "small"
   },
   {
     "date": "Aug 2026",
@@ -17,7 +47,7 @@
     "link": "/about/",
     "excerpt": "We welcome new rotation students and a fresh semester!",
     "body": "<p>A new semester begins! We welcome our new rotation students, Allison Sargent, Hanlin Zhang, and Tiantian Zhang to the lab and look forward to an exciting and productive fall. Here's to new discoveries ahead!</p>",
-    "featured": "large"
+    "featured": ""
   },
   {
     "date": "Aug 2026",
@@ -37,7 +67,7 @@
     "link": "/about/",
     "excerpt": "We warmly welcome postdoctoral researcher Dr. Mehrdad Faraji.",
     "body": "<p>We are excited to welcome Dr. Mehrdad Faraji as our new postdoctoral researcher. Dr. Faraji received his Ph.D. in Nanochemistry and Materials Science from the University of Genoa and the Italian Institute of Technology. His research focuses on the synthesis and characterization of advanced materials, with particular emphasis on 2D halide perovskites and their heterostructures for optoelectronic applications. Welcome aboard, Mehrdad!</p>",
-    "featured": "small"
+    "featured": ""
   },
   {
     "date": "June 2026",
@@ -57,7 +87,7 @@
     "link": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02285",
     "excerpt": "Front cover: air stable microlasers was achieve with an \"air-unstable\" layered perovskite.",
     "body": "<p>Our work with Dr. Sangyeon (Fred) Cho on layered perovskite microlasers was featured on the front cover of <a href=\"https://pubs.acs.org/doi/10.1021/acsphotonics.5c02285\" target=\"_blank\"><u>ACS Photonics</u></a>. We report stable room-temperature lasing from quasi-2D tin iodide perovskite microcrystals in ambient air. The cover illustrates plasmonic microlasing from microscale crystals on the gold substrate.</p><p>Read More: <a href=\"/research/project#perovskite-nanolasers\" target=\"_blank\"><u>Miniaturized Layered Perovskite Lasers</u></a>.</p>",
-    "featured": "large"
+    "featured": ""
   },
   {
     "date": "Feb 2026",
@@ -67,7 +97,7 @@
     "link": "/about/",
     "excerpt": "Wai Loon passed his qualifying exam. Congrats!",
     "body": "<p>Wai Loon passed his qualifying exam at the Department of Physics and Astronomy. Congratulations!</p>",
-    "featured": "small"
+    "featured": ""
   },
   {
     "date": "Feb 2026",
@@ -103,7 +133,7 @@
     "link": "https://www.nature.com/articles/s41560-025-01906-6",
     "excerpt": "New report in Nature Energy with solar cells retain 90% performance at 90°C.",
     "body": "<p>Led by Dr. Wenzhan Xu, our paper using ionic liquids to enhance the stability of perovskite solar cells has been published in <a href=\"https://www.nature.com/articles/s41560-025-01906-6\" target=\"_blank\"><u>Nature Energy</u></a>. A new ionic liquid MEM-MIM-Cl was used to regulate perovskite growth and stabilize buried interfaces. Solar cells incorporating MEM-MIM-Cl achieved a power conversion efficiency of 25.9% and retained 90% initial performance after 1,500 hrs' 1-sun illumination and 90°C thermal stress - surpassing prior benchmarks under milder ageing conditions. Many thanks to all the collaborators!</p><p>Read More: <a href=\"/research/project#templated-perovskite-optoelectronics\" target=\"_blank\"><u>Templated Crystallization in Perovskite Optoelectronics</u></a>.</p>",
-    "featured": "large"
+    "featured": "small"
   },
   {
     "date": "Nov 2025",

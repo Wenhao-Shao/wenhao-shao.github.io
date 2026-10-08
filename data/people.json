@@ -16,7 +16,8 @@
     "title": "Postdoctoral Researcher",
     "photo": "/assets/img/people/mehrdad-faraji.jpg",
     "section": "member",
-    "bio": "<p>Dr. Mehrdad Faraji received his Ph.D. in Nanochemistry and Materials Science from the University of Genoa and the Italian Institute of Technology. His research focuses on the synthesis and characterization of advanced materials, with particular emphasis on 2D halide perovskites and their heterostructures for optoelectronic applications. His previous research includes the design, synthesis, and characterization of 2D halide perovskite lateral heterojunctions. In addition, he has experience in atomistic modeling and simulation using density functional theory (DFT) to investigate the structural, electronic, and optical properties of low-dimensional materials.</p>"
+    "bio": "<p>Dr. Mehrdad Faraji received his Ph.D. in Nanochemistry and Materials Science from the University of Genoa and the Italian Institute of Technology. His research focuses on the synthesis and characterization of advanced materials, with particular emphasis on 2D halide perovskites and their heterostructures for optoelectronic applications. His previous research includes the design, synthesis, and characterization of 2D halide perovskite lateral heterojunctions. In addition, he has experience in atomistic modeling and simulation using density functional theory (DFT) to investigate the structural, electronic, and optical properties of low-dimensional materials.</p>",
+    "email": "Mehrdad.Faraji@uga.edu"
   },
   {
     "slug": "chooi-wai-loon",
@@ -37,6 +38,15 @@
     "email": "Yue.Wang6@uga.edu"
   },
   {
+    "slug": "tiantian-zhang",
+    "name": "Tiantian Zhang",
+    "title": "Ph.D. Student, Chemistry",
+    "photo": "/assets/img/people/tiantian-zhang.jpg",
+    "section": "member",
+    "bio": "<p>Tiantian was born and raised in Shanghai, China, and received her master’s degree from Shanghai University of Engineering Science. During her master’s studies, her research focused on transition-metal-catalyzed organic synthesis of small molecules.</p><p>At UGA, Tiantian is expanding her research experience into new areas of materials chemistry in the Shao group. Her current work involves molecular synthesis, crystal growth, and exploring how molecular and crystal structures influence the optical and electronic properties of functional materials.</p><p>Outside the lab, Tiantian enjoys hiking, working out, and exploring new places.</p>",
+    "email": "Tiantian.Zhang@uga.edu"
+  },
+  {
     "slug": "owen-sexton",
     "name": "Owen Sexton",
     "title": "Undergrad Student, Chemistry",
@@ -51,7 +61,8 @@
     "title": "Visiting Undergrad Researcher, Nanjing University",
     "photo": "/assets/img/people/sailike-amanzhuoli.jpg",
     "section": "member",
-    "bio": "<p>Aman is a visiting undergraduate researcher from Nanjing University, joining the Shao Lab from September 2026 to February 2027. He is a senior majoring in Chemistry at Nanjing University. During his time at UGA, Aman focuses on organic synthesis for the group's morphological chirality project on layered halide perovskites, and is also learning crystal growth and optical characterization techniques.</p><p>Outside the lab, Aman enjoys playing soccer. He is from the Kazakh ethnic group in Xinjiang, China, and is passionate about exploring different cultures. In his free time, he likes doing sports and working out, and listening to traditional Kazakh music.</p>"
+    "bio": "<p>Aman is a visiting undergraduate researcher from Nanjing University, joining the Shao Lab from September 2026 to February 2027. He is a senior majoring in Chemistry at Nanjing University. During his time at UGA, Aman focuses on organic synthesis for the group's morphological chirality project on layered halide perovskites, and is also learning crystal growth and optical characterization techniques.</p><p>Outside the lab, Aman enjoys playing soccer. He is from the Kazakh ethnic group in Xinjiang, China, and is passionate about exploring different cultures. In his free time, he likes doing sports and working out, and listening to traditional Kazakh music.</p>",
+    "email": "Amanzhuoli@uga.edu"
   },
   {
     "slug": "le-wei",
