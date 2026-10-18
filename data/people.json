@@ -47,6 +47,14 @@
     "email": "Tiantian.Zhang@uga.edu"
   },
   {
+    "slug": "hanlin-zhang",
+    "name": "Hanlin Zhang",
+    "title": "Ph.D. Student, Chemistry",
+    "photo": "/assets/img/people/hanlin-zhang.jpg",
+    "section": "member",
+    "bio": "<p>Hanlin completed undergraduate studies at Shandong Normal University and the University of Waterloo, earning a bachelor’s degree in chemistry. Hanlin’s previous research focused on the synthesis and surface engineering of noble-metal nanomaterials for electrocatalysis and biosensing.</p><p>In the Shao group, Hanlin will work on molecular synthesis and crystal growth, exploring how molecular and crystal structures influence the optical properties of perovskites.</p>"
+  },
+  {
     "slug": "owen-sexton",
     "name": "Owen Sexton",
     "title": "Undergrad Student, Chemistry",
