@@ -31,13 +31,23 @@
   },
   {
     "date": "Sep 2026",
+    "title": "Literature Seminar",
+    "tag": "People",
+    "image": "/assets/img/news/2609_Yue-lit-seminar_2.jpg",
+    "link": "https://www.chem.uga.edu/events/content/2026/literature-seminar-designing-mof-nanopesticides-root-leaf",
+    "excerpt": "Yue gave a literature seminar at the Department of Chemistry.",
+    "body": "<p>Yue gave a literature seminar at the Department of Chemistry, <a href=\"https://www.chem.uga.edu/events/content/2026/literature-seminar-designing-mof-nanopesticides-root-leaf\" target=\"_blank\"><u>Designing MOF Nanopesticides – from Root to Leaf</u></a>. She discussed how coordination chemistry and materials design — metal–linker chemistry, framework stability, surface functionality, and stimulus-responsive release — can guide metal–organic frameworks as pesticide carriers in complex agricultural settings. Great job, Yue!</p>",
+    "featured": "large"
+  },
+  {
+    "date": "Sep 2026",
     "title": "New VIPR Team: Photonic Materials",
     "tag": "Teaching",
     "image": "/assets/img/news/2609_vipr.png",
     "link": "https://vipr.uga.edu/team/photonic-materials-from-nanocrystals-to-bulk/",
     "excerpt": "Undergraduates: join our new VIPR team, Photonic Materials from Nanocrystals to Bulk. Apply by Oct 31.",
     "body": "<p>Fall 26 marks the launch of a new UGA <a href=\"https://vipr.uga.edu/\" target=\"_blank\"><u>Vertically Integrated Projects for Research (VIPR)</u></a> team, <a href=\"https://vipr.uga.edu/team/photonic-materials-from-nanocrystals-to-bulk/\" target=\"_blank\"><u>Photonic Materials from Nanocrystals to Bulk</u></a>, with Prof. Vladislav Klepov and Prof. Tina Salguero. Students on the team design, synthesize, and characterize crystals, and combine spectroscopy, microscopy, and AI-driven data analysis to understand how crystal structure shapes material properties across length scales.</p><p>The team is accepting undergraduate applications for Spring 2027 through <strong>October 31, 2026</strong>. <a href=\"https://uga.infoready4.com/#freeformCompetitionDetail/2036853\" target=\"_blank\"><u>Apply here</u></a>.</p>",
-    "featured": "large"
+    "featured": "small"
   },
   {
     "date": "Sep 2026",
@@ -47,7 +57,7 @@
     "link": "/about/",
     "excerpt": "We welcome visiting undergraduate researcher Aman from Nanjing University.",
     "body": "<p>We are excited to welcome Amanzhuoli, Sailike (Aman), a visiting undergraduate researcher from the Department of Chemistry at Nanjing University. Aman will work with us on morphologically chiral layered halide perovskites. Welcome, Aman!</p>",
-    "featured": "small"
+    "featured": ""
   },
   {
     "date": "Aug 2026",
